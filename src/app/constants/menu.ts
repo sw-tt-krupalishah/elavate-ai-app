@@ -12,7 +12,7 @@ const data: IMenuItem[] = [
     id: 'create your own app ',
     icon: 'iconsminds-air-balloon-1',
     label: 'Create app',
-    to: '/app/vien',
+    to: '/app/pages',
   },
   {
     id: 'second-menu',

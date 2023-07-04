@@ -147,12 +147,17 @@ body {
   }
 }
 
-app-color-switcher, app-app > div, app-user > div {
+app-color-switcher,
+app-app>div,
+app-user>div {
   opacity: 0;
 }
 
 body.show {
-  app-color-switcher, app-app > div, app-user > div {
+
+  app-color-switcher,
+  app-app>div,
+  app-user>div {
     opacity: 1;
   }
 }
@@ -191,7 +196,7 @@ body.show {
   padding-right: 15px;
 }
 
-perfect-scrollbar > .ps {
+perfect-scrollbar>.ps {
   max-width: unset;
   width: unset;
   margin-right: -15px;
@@ -226,8 +231,8 @@ perfect-scrollbar > .ps {
   width: 5px !important;
 }
 
-.ps__rail-y:hover > .ps__thumb-y,
-.ps__rail-y:focus > .ps__thumb-y,
+.ps__rail-y:hover>.ps__thumb-y,
+.ps__rail-y:focus>.ps__thumb-y,
 .ps__rail-y.ps--clicking .ps__thumb-y {
   width: 5px !important;
   left: 0 !important;
@@ -445,7 +450,7 @@ button {
 
 ul {
   li {
-    margin-bottom: 5px;
+    // margin-bottom: 5px;
 
     &:last-of-type {
       margin-bottom: 0;
@@ -594,6 +599,7 @@ p {
 
 .display-options-container {
   margin-bottom: 0.25rem;
+
   @include respond-below(xs) {
     margin-top: 0.5rem;
   }
@@ -621,13 +627,13 @@ p {
 
   .btn-outline-dark:not(:disabled):not(.disabled):active,
   .btn-outline-dark:not(:disabled):not(.disabled).active,
-  .show > .btn-outline-dark.dropdown-toggle {
+  .show>.btn-outline-dark.dropdown-toggle {
     background-color: $theme-color-1;
     border-color: $theme-color-1;
     color: $button-text-color;
   }
 
-  & > span {
+  &>span {
     padding-top: 0.1rem;
   }
 
@@ -751,8 +757,8 @@ button {
 }
 
 .btn-lg,
-.btn-group-lg > .btn,
-.btn-group-sm > .btn {
+.btn-group-lg>.btn,
+.btn-group-sm>.btn {
   border-radius: 50px;
 }
 
@@ -834,6 +840,7 @@ a.btn-primary:not([href]):not([tabindex]) {
 
 .dropdown-menu.dropdown-menu-sm {
   min-width: 4rem;
+
   .dropdown-item {
     padding: 0.25rem 1rem;
   }
@@ -841,7 +848,7 @@ a.btn-primary:not([href]):not([tabindex]) {
 
 .btn-primary:not(:disabled):not(.disabled):active,
 .btn-primary:not(:disabled):not(.disabled).active,
-.show > .btn-primary.dropdown-toggle {
+.show>.btn-primary.dropdown-toggle {
   background-color: darken($theme-color-1, 12%);
   border-color: darken($theme-color-1, 12%);
   color: $button-text-color;
@@ -862,62 +869,50 @@ a.btn-secondary:not([href]):not([tabindex]) {
 
 .btn-secondary:not(:disabled):not(.disabled):active,
 .btn-secondary:not(:disabled):not(.disabled).active,
-.show > .btn-secondary.dropdown-toggle {
+.show>.btn-secondary.dropdown-toggle {
   background-color: darken($theme-color-2, 12%);
   border-color: darken($theme-color-2, 12%);
   color: $button-text-color;
 }
 
 .btn-primary.btn-primary-gradient {
-  background: linear-gradient(
-    to right,
-    $theme-color-1,
-    darken($theme-color-1, 15%)
-  );
+  background: linear-gradient(to right,
+      $theme-color-1,
+      darken($theme-color-1, 15%));
 
   &:hover {
-    background: linear-gradient(
-      to right,
-      $theme-color-1,
-      darken($theme-color-1, 8%)
-    );
+    background: linear-gradient(to right,
+        $theme-color-1,
+        darken($theme-color-1, 8%));
   }
 }
 
 .btn-primary-gradient:not(:disabled):not(.disabled):active,
 .btn-primary-gradient:not(:disabled):not(.disabled).active,
-.show > .btn-primary-gradient.dropdown-toggle {
-  background: linear-gradient(
-    to right,
-    $theme-color-1,
-    darken($theme-color-1, 15%)
-  );
+.show>.btn-primary-gradient.dropdown-toggle {
+  background: linear-gradient(to right,
+      $theme-color-1,
+      darken($theme-color-1, 15%));
 }
 
 .btn-secondary-gradient {
-  background: linear-gradient(
-    to right,
-    $theme-color-2,
-    darken($theme-color-2, 15%)
-  );
+  background: linear-gradient(to right,
+      $theme-color-2,
+      darken($theme-color-2, 15%));
 
   &:hover {
-    background: linear-gradient(
-      to right,
-      $theme-color-2,
-      darken($theme-color-2, 8%)
-    );
+    background: linear-gradient(to right,
+        $theme-color-2,
+        darken($theme-color-2, 8%));
   }
 }
 
 .btn-secondary-gradient:not(:disabled):not(.disabled):active,
 .btn-secondary-gradient:not(:disabled):not(.disabled).active,
-.show > .btn-secondary-gradient.dropdown-toggle {
-  background: linear-gradient(
-    to right,
-    $theme-color-2,
-    darken($theme-color-2, 15%)
-  );
+.show>.btn-secondary-gradient.dropdown-toggle {
+  background: linear-gradient(to right,
+      $theme-color-2,
+      darken($theme-color-2, 15%));
 }
 
 .btn-warning {
@@ -1027,7 +1022,7 @@ a.btn-secondary:not([href]):not([tabindex]) {
 
 .btn-outline-primary:not(:disabled):not(.disabled):active,
 .btn-outline-primary:not(:disabled):not(.disabled).active,
-.show > .btn-outline-primary.dropdown-toggle {
+.show>.btn-outline-primary.dropdown-toggle {
   background-color: $theme-color-1;
   border-color: $theme-color-1;
   color: $foreground-color;
@@ -1046,7 +1041,7 @@ a.btn-secondary:not([href]):not([tabindex]) {
 
 .btn-outline-secondary:not(:disabled):not(.disabled):active,
 .btn-outline-secondary:not(:disabled):not(.disabled).active,
-.show > .btn-outline-secondary.dropdown-toggle {
+.show>.btn-outline-secondary.dropdown-toggle {
   background-color: $theme-color-2;
   border-color: $theme-color-2;
   color: $foreground-color;
@@ -1097,7 +1092,7 @@ a.btn-secondary:not([href]):not([tabindex]) {
 }
 
 .btn-xl,
-.btn-group-xl > .btn {
+.btn-group-xl>.btn {
   line-height: 1.5;
   font-weight: 700;
   letter-spacing: 0.05rem;
@@ -1105,25 +1100,26 @@ a.btn-secondary:not([href]):not([tabindex]) {
 }
 
 .btn-lg,
-.btn-group-lg > .btn {
+.btn-group-lg>.btn {
   line-height: 1.5;
   font-weight: 700;
   letter-spacing: 0.05rem;
   padding: 0.6rem 2.5rem 0.6rem 2.5rem;
+
   @include respond-below(xs) {
     padding: 0.5rem 2.5rem 0.5rem 2.5rem;
   }
 }
 
 .btn-sm,
-.btn-group-sm > .btn {
+.btn-group-sm>.btn {
   padding: 0.45rem 1rem 0.45rem 1rem;
   font-size: 0.8rem;
   line-height: 1.5;
 }
 
 .btn-xs,
-.btn-group-xs > .btn {
+.btn-group-xs>.btn {
   padding: 0.25rem 0.75rem;
   font-size: 0.76rem;
   line-height: 1.3;
@@ -1143,14 +1139,14 @@ a.btn-secondary:not([href]):not([tabindex]) {
   color: $foreground-color;
 }
 
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle),
-.btn-group > .btn-group:not(:last-child) > .btn {
+.btn-group>.btn:not(:last-child):not(.dropdown-toggle),
+.btn-group>.btn-group:not(:last-child)>.btn {
   border-top-right-radius: 0 !important;
   border-bottom-right-radius: 0 !important;
 }
 
-.btn-group > .btn:not(:first-child),
-.btn-group > .btn-group:not(:first-child) > .btn {
+.btn-group>.btn:not(:first-child),
+.btn-group>.btn-group:not(:first-child)>.btn {
   border-top-left-radius: 0 !important;
   border-bottom-left-radius: 0 !important;
 }
@@ -1284,7 +1280,7 @@ a.btn-secondary:not([href]):not([tabindex]) {
     border: 1px solid $button-text-color !important;
   }
 
-  .btn .custom-control-input:checked ~ .custom-control-label::before {
+  .btn .custom-control-input:checked~.custom-control-label::before {
     border: 1px solid $button-text-color !important;
   }
 
@@ -1407,15 +1403,15 @@ a.btn-secondary:not([href]):not([tabindex]) {
   border-color: $muted-color !important;
 }
 
-.remove-last-border > *:last-child {
+.remove-last-border>*:last-child {
   border-bottom: initial !important;
 }
 
-.remove-last-margin > *:last-child {
+.remove-last-margin>*:last-child {
   margin-bottom: initial !important;
 }
 
-.remove-last-padding > *:last-child {
+.remove-last-padding>*:last-child {
   padding-bottom: initial !important;
 }
 
@@ -1598,7 +1594,7 @@ a.btn-secondary:not([href]):not([tabindex]) {
   margin-bottom: 0.5rem;
 }
 
-.breadcrumb-item + .breadcrumb-item::before {
+.breadcrumb-item+.breadcrumb-item::before {
   content: "|";
 }
 
@@ -1638,6 +1634,7 @@ a.btn-secondary:not([href]):not([tabindex]) {
 .nav-tabs .nav-item.show .nav-link {
   background: initial;
 }
+
 .nav-tabs.nav-justified .nav-item .nav-link {
   text-align: center !important;
 }
@@ -1655,7 +1652,9 @@ a.btn-secondary:not([href]):not([tabindex]) {
   left: 50%;
   transform: translateX(-50%);
 }
+
 .separator-tabs {
+
   .nav-tabs .nav-link.active::before,
   .nav-tabs .nav-item.show .nav-link::before {
     content: " ";
@@ -1820,7 +1819,9 @@ a.btn-secondary:not([href]):not([tabindex]) {
       color: $secondary-color;
     }
 
-    &.btn-light:not(:disabled):not(.disabled):active, &.btn-light:not(:disabled):not(.disabled).active, .show>.btn-light.dropdown-toggle {
+    &.btn-light:not(:disabled):not(.disabled):active,
+    &.btn-light:not(:disabled):not(.disabled).active,
+    .show>.btn-light.dropdown-toggle {
       background-color: darken($background-color, 3%);
       border-color: darken($background-color, 3%);
       color: $secondary-color;
@@ -1833,11 +1834,12 @@ a.btn-secondary:not([href]):not([tabindex]) {
     text-align: center;
 
     svg {
-      height: 12px;
+      height: 20px;
     }
 
     .main {
-      fill: $primary-color;
+      fill: #41c37c !important;
+      // fill: $primary-color; 
       transition: fill $menu-collapse-time;
     }
 
@@ -2025,11 +2027,11 @@ a.btn-secondary:not([href]):not([tabindex]) {
 
   .custom-control {
     .custom-control-label::before {
-      border: 1px solid $secondary-color !important;
+      border: 1px solid #41c37c !important;
     }
 
     .custom-control-label::after {
-      background-color: $secondary-color;
+      background-color: #41c37c;
     }
   }
 
@@ -2091,6 +2093,7 @@ a.btn-secondary:not([href]):not([tabindex]) {
   background-position: center center;
   margin: 0 auto;
   background-size: contain;
+
   @include respond-below(sm) {
     width: 80px;
   }
@@ -2106,15 +2109,18 @@ a.btn-secondary:not([href]):not([tabindex]) {
 
 //Menu Config Button
 #app-container {
+
   &.sub-hidden .menu-button,
   &.menu-sub-hidden .menu-button {
     .sub {
-      fill: $secondary-color;
+      // fill: $secondary-color;
+      fill: #41c37c !important;
     }
   }
 
   &.main-hidden .menu-button,
   &.menu-hidden .menu-button {
+
     .main,
     .sub {
       fill: $secondary-color;
@@ -2156,6 +2162,7 @@ a.btn-secondary:not([href]):not([tabindex]) {
       --scrollbar-padding: 0px;
       --scroll-view-margin: 0;
       --scroll-view-color: transparent;
+
       .ps__thumb-y {
         right: 0;
       }
@@ -2163,6 +2170,7 @@ a.btn-secondary:not([href]):not([tabindex]) {
 
     ul {
       margin-bottom: initial;
+
       li {
         position: relative;
 
@@ -2189,12 +2197,16 @@ a.btn-secondary:not([href]):not([tabindex]) {
           &:hover,
           &:focus {
             color: $theme-color-1;
+
+            background: #f1f2f3;
+
           }
         }
 
         i {
           font-size: 32px;
           line-height: 42px;
+          color: #41c37c !important;
         }
 
         &.active a {
@@ -2203,12 +2215,12 @@ a.btn-secondary:not([href]):not([tabindex]) {
 
         &.active:after {
           content: " ";
-          background: $theme-color-1;
+          background: #41c37c;
           color: $foreground-color;
           border-radius: 10px;
           position: absolute;
           width: 6px;
-          height: 90px;
+          height: 100px;
           top: 50%;
           transform: translateY(-50%);
           left: 0;
@@ -2221,6 +2233,7 @@ a.btn-secondary:not([href]):not([tabindex]) {
         }
       }
     }
+
     @include respond-below(xl) {
       width: $main-menu-width-lg;
       height: calc(100% - #{$navbar-height-lg});
@@ -2272,6 +2285,7 @@ a.btn-secondary:not([href]):not([tabindex]) {
       padding-top: 5px;
       padding-bottom: 5px;
       margin-top: 5px;
+
       .ps__thumb-y {
         right: 0;
       }
@@ -2326,11 +2340,14 @@ a.btn-secondary:not([href]):not([tabindex]) {
 
     ul.inner-level-menu {
       display: block !important;
+
       li {
+
         a,
         i {
           color: $primary-color;
         }
+
         a:hover,
         &.active i,
         &.active a {
@@ -2399,6 +2416,7 @@ body.default-transition .menu .sub-menu {
 body.default-transition .menu .main-menu {
   transition: transform $menu-collapse-time, border-radius $menu-collapse-time;
 }
+
 //Menu Config Main Menu Sub Menu
 
 .sub-hidden .sub-menu,
@@ -2540,6 +2558,7 @@ body.default-transition .menu .main-menu {
 
   .scroll {
     height: 100%;
+
     .ps__thumb-y {
       right: 0;
     }
@@ -2882,6 +2901,7 @@ body.default-transition main {
 
 //Menu Config Main
 #app-container {
+
   &.sub-hidden main,
   &.menu-sub-hidden main,
   &.menu-hidden main {
@@ -2897,6 +2917,7 @@ body.default-transition main {
     main {
       margin-left: $main-margin + $sub-menu-width;
     }
+
     &.menu-hidden {
       main {
         margin-left: $main-margin;
@@ -2905,6 +2926,7 @@ body.default-transition main {
   }
 
   @include respond-below(xl) {
+
     &.sub-hidden main,
     &.menu-sub-hidden main,
     &.menu-hidden main {
@@ -2920,6 +2942,7 @@ body.default-transition main {
       main {
         margin-left: $main-margin-lg + $sub-menu-width-lg;
       }
+
       &.menu-hidden {
         main {
           margin-left: $main-margin-lg;
@@ -2929,6 +2952,7 @@ body.default-transition main {
   }
 
   @include respond-below(lg) {
+
     &.sub-hidden main,
     &.menu-sub-hidden main,
     &.menu-hidden main {
@@ -2944,6 +2968,7 @@ body.default-transition main {
       main {
         margin-left: $main-margin-md + $sub-menu-width-md;
       }
+
       &.menu-hidden {
         main {
           margin-left: $main-margin-md;
@@ -3174,6 +3199,7 @@ body.default-transition main {
 
   .panel-heading.card-header {
     padding: 1rem 1.75rem;
+
     .btn {
       padding: initial;
     }
@@ -3247,12 +3273,10 @@ body.default-transition main {
 }
 
 .dashboard-sq-banner {
-  background-image: linear-gradient(
-    to right top,
-    $gradient-color-2,
-    $gradient-color-3,
-    $gradient-color-1
-  );
+  background-image: linear-gradient(to right top,
+      $gradient-color-2,
+      $gradient-color-3,
+      $gradient-color-1 );
   background-size: cover;
   height: 385px;
   transition: 0.5s;
@@ -3282,6 +3306,7 @@ body.default-transition main {
 
 .dashboard-top-rated {
   height: 300px;
+
   .glide img {
     height: 120px;
     display: flex;
@@ -3289,6 +3314,7 @@ body.default-transition main {
     width: 100%;
   }
 }
+
 .rounded .border-radius,
 .rounded .dashboard-top-rated .glide img,
 .rounded .notification,
@@ -3296,6 +3322,7 @@ body.default-transition main {
 .rounded .tooltip-inner {
   border-radius: 0.75rem;
 }
+
 .dashboard-search {
   height: 650px;
   background: url("../../../img/plane.jpg");
@@ -3389,6 +3416,7 @@ body.default-transition main {
 .cal-month-view .cal-cell-row:hover {
   background: $foreground-color !important;
 }
+
 mwl-calendar-tooltip-window .cal-tooltip {
   top: -150px !important;
   opacity: 1;
@@ -3405,6 +3433,7 @@ mwl-calendar-tooltip-window .cal-tooltip {
 
   .cal-tooltip-arrow {
     border: initial !important;
+
     &:before {
       position: absolute;
       display: block;
@@ -3527,11 +3556,7 @@ mwl-calendar-tooltip-window .cal-tooltip {
   margin-bottom: 15px;
 }
 
-.ngx-datatable.fixed-header
-  .datatable-header
-  .datatable-header-inner
-  .datatable-header-cell.sortable
-  .datatable-header-cell-template-wrap {
+.ngx-datatable.fixed-header .datatable-header .datatable-header-inner .datatable-header-cell.sortable .datatable-header-cell-template-wrap {
   padding-right: 30px;
   white-space: nowrap;
   font-weight: bold;
@@ -3551,10 +3576,7 @@ mwl-calendar-tooltip-window .cal-tooltip {
   }
 }
 
-.ngx-datatable.fixed-header
-  .datatable-header
-  .datatable-header-inner
-  .datatable-header-cell {
+.ngx-datatable.fixed-header .datatable-header .datatable-header-inner .datatable-header-cell {
   &.sort-active.sort-asc .datatable-header-cell-template-wrap:after {
     opacity: 1;
   }
@@ -3583,9 +3605,11 @@ datatable-row-wrapper:last-of-type .datatable-body-row {
 .ngx-datatable .custom-control.custom-checkbox {
   margin-top: -4px;
 }
+
 .data-table-scrollable .datatable-body .datatable-scroll {
   padding-bottom: 20px;
 }
+
 .data-table-rows {
   .ngx-datatable {
     margin-left: -15px;
@@ -3625,50 +3649,28 @@ datatable-row-wrapper:last-of-type .datatable-body-row {
     width: 100% !important;
   }
 
-  .ngx-datatable.fixed-row
-    .datatable-scroll
-    .datatable-body-row
-    .datatable-body-cell,
-  .ngx-datatable.fixed-row
-    .datatable-scroll
-    .datatable-body-row
-    .datatable-body-group-cell {
+  .ngx-datatable.fixed-row .datatable-scroll .datatable-body-row .datatable-body-cell,
+  .ngx-datatable.fixed-row .datatable-scroll .datatable-body-row .datatable-body-group-cell {
     padding-left: 1.5rem;
   }
 
-  .ngx-datatable.fixed-header
-    .datatable-header
-    .datatable-header-inner
-    .datatable-header-cell.sortable
-    .datatable-header-cell-template-wrap {
+  .ngx-datatable.fixed-header .datatable-header .datatable-header-inner .datatable-header-cell.sortable .datatable-header-cell-template-wrap {
     padding-left: 25px;
   }
 
-  .ngx-datatable.fixed-header
-    .datatable-header
-    .datatable-header-inner
-    .datatable-header-cell.sortable
-    .datatable-header-cell-template-wrap:before {
+  .ngx-datatable.fixed-header .datatable-header .datatable-header-inner .datatable-header-cell.sortable .datatable-header-cell-template-wrap:before {
     right: initial;
     left: 0.5em;
   }
 
-  .ngx-datatable.fixed-header
-    .datatable-header
-    .datatable-header-inner
-    .datatable-header-cell.sortable
-    .datatable-header-cell-template-wrap:after {
+  .ngx-datatable.fixed-header .datatable-header .datatable-header-inner .datatable-header-cell.sortable .datatable-header-cell-template-wrap:after {
     right: initial;
     left: 1em;
   }
 }
 
 .data-table-responsive {
-  .ngx-datatable.fixed-row
-    .datatable-scroll
-    .datatable-body-row
-    .datatable-row-center
-    datatable-body-cell:first-of-type {
+  .ngx-datatable.fixed-row .datatable-scroll .datatable-body-row .datatable-row-center datatable-body-cell:first-of-type {
     padding-left: 0 !important;
 
     .glyph-icon {
@@ -3840,6 +3842,7 @@ div[data-notify="container"] {
   .sn-title {
     color: $info-color !important;
   }
+
   .icon svg {
     fill: $info-color !important;
   }
@@ -3849,9 +3852,11 @@ div[data-notify="container"] {
   background-color: $foreground-color !important;
   border: 1px solid $success-color !important;
   color: $primary-color !important;
+
   .sn-title {
     color: $success-color !important;
   }
+
   .icon svg {
     fill: $success-color !important;
   }
@@ -3861,9 +3866,11 @@ div[data-notify="container"] {
   background-color: $foreground-color !important;
   border: 1px solid $warning-color !important;
   color: $primary-color !important;
+
   .sn-title {
     color: $warning-color !important;
   }
+
   .icon svg {
     fill: $warning-color !important;
   }
@@ -3873,9 +3880,11 @@ div[data-notify="container"] {
   background-color: $foreground-color !important;
   border: 1px solid $error-color !important;
   color: $primary-color !important;
+
   .sn-title {
     color: $error-color !important;
   }
+
   .icon svg {
     fill: $error-color !important;
   }
@@ -3885,8 +3894,10 @@ div[data-notify="container"] {
   color: $theme-color-1 !important;
   background-color: mix($theme-color-1, $background-color, 20%) !important;
   border-color: rgba($theme-color-1, 0.1) !important;
+
   .sn-progress-loader {
     background: rgba($color: $theme-color-1, $alpha: 0.1) !important;
+
     span {
       background: rgba($color: $theme-color-1, $alpha: 0.5) !important;
     }
@@ -3897,8 +3908,10 @@ div[data-notify="container"] {
   color: $theme-color-2 !important;
   background-color: mix($theme-color-2, $background-color, 20%) !important;
   border-color: rgba($theme-color-2, 0.1) !important;
+
   .sn-progress-loader {
     background: rgba($color: $theme-color-2, $alpha: 0.1) !important;
+
     span {
       background: rgba($color: $theme-color-2, $alpha: 0.5) !important;
     }
@@ -3909,11 +3922,14 @@ div[data-notify="container"] {
   color: $info-color !important;
   background-color: mix($info-color, $background-color, 20%) !important;
   border-color: rgba($info-color, 0.1) !important;
+
   .icon svg {
     fill: $info-color !important;
   }
+
   .sn-progress-loader {
     background: rgba($color: $info-color, $alpha: 0.1) !important;
+
     span {
       background: rgba($color: $info-color, $alpha: 0.5) !important;
     }
@@ -3924,11 +3940,14 @@ div[data-notify="container"] {
   color: $error-color !important;
   background-color: mix($error-color, $background-color, 20%) !important;
   border-color: rgba($error-color, 0.1) !important;
+
   .icon svg {
     fill: $error-color !important;
   }
+
   .sn-progress-loader {
     background: rgba($color: $error-color, $alpha: 0.1) !important;
+
     span {
       background: rgba($color: $error-color, $alpha: 0.5) !important;
     }
@@ -3939,11 +3958,14 @@ div[data-notify="container"] {
   color: $success-color !important;
   background-color: mix($success-color, $background-color, 20%) !important;
   border-color: rgba($success-color, 0.1) !important;
+
   .icon svg {
     fill: $success-color !important;
   }
+
   .sn-progress-loader {
     background: rgba($color: $success-color, $alpha: 0.1) !important;
+
     span {
       background: rgba($color: $success-color, $alpha: 0.5) !important;
     }
@@ -3954,11 +3976,14 @@ div[data-notify="container"] {
   color: $warning-color !important;
   background-color: mix($warning-color, $background-color, 20%) !important;
   border-color: rgba($warning-color, 0.1) !important;
+
   .icon svg {
     fill: $warning-color !important;
   }
+
   .sn-progress-loader {
     background: rgba($color: $warning-color, $alpha: 0.1) !important;
+
     span {
       background: rgba($color: $warning-color, $alpha: 0.5) !important;
     }
@@ -4029,12 +4054,12 @@ input:-webkit-autofill {
 }
 
 .has-float-label label::after,
-.has-float-label > span::after,
-.has-float-label > span::after {
+.has-float-label>span::after,
+.has-float-label>span::after {
   background: $input-background;
 }
 
-.has-float-label > div.error::after {
+.has-float-label>div.error::after {
   background: initial;
 }
 
@@ -4075,30 +4100,24 @@ input:-webkit-autofill {
   border-color: rgba($theme-color-1, 0.6);
 }
 
-.custom-control-input:disabled ~ .custom-control-label::before {
+.custom-control-input:disabled~.custom-control-label::before {
   background-color: rgba($primary-color, 0.25);
 }
 
-.custom-control-input:active ~ .custom-control-label::before {
+.custom-control-input:active~.custom-control-label::before {
   background-color: transparent;
 }
 
 .custom-checkbox .custom-control-label.indeterminate::after {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='"+encodecolor(
-      $button-text-color
-    )+"' d='M0 2h4'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='" +encodecolor($button-text-color )+"' d='M0 2h4'/%3E%3C/svg%3E");
 }
 
-.custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='"+encodecolor(
-      $button-text-color
-    )+"' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
+.custom-checkbox .custom-control-input:checked~.custom-control-label::after {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='" +encodecolor($button-text-color )+"' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
-.custom-radio .custom-control-input:checked ~ .custom-control-label::after {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='"+encodecolor(
-      $button-text-color
-    )+"'/%3E%3C/svg%3E");
+.custom-radio .custom-control-input:checked~.custom-control-label::after {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='" +encodecolor($button-text-color )+"'/%3E%3C/svg%3E");
 }
 
 .custom-control-label,
@@ -4120,31 +4139,29 @@ input:-webkit-autofill {
   background: initial !important;
 }
 
-.custom-checkbox
-  .custom-control-input:indeterminate
-  ~ .custom-control-label::before {
+.custom-checkbox .custom-control-input:indeterminate~.custom-control-label::before {
   background-color: $theme-color-1;
 }
 
-.custom-control-input:checked ~ .custom-control-label::before {
+.custom-control-input:checked~.custom-control-label::before {
   background-color: $theme-color-1 !important;
   box-shadow: initial !important;
   border: 1px solid $theme-color-1 !important;
 }
 
-.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before,
-.custom-radio .custom-control-input:checked ~ .custom-control-label::before {
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before,
+.custom-radio .custom-control-input:checked~.custom-control-label::before {
   background-color: $theme-color-1;
   box-shadow: initial !important;
 }
 
-.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before,
-.custom-radio .custom-control-input:checked ~ .custom-control-label::before {
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before,
+.custom-radio .custom-control-input:checked~.custom-control-label::before {
   background-color: $theme-color-1;
   box-shadow: initial !important;
 }
 
-.custom-switch .custom-control-input:checked ~ .custom-control-label::after {
+.custom-switch .custom-control-input:checked~.custom-control-label::after {
   background-color: $foreground-color;
 }
 
@@ -4173,7 +4190,7 @@ input:-webkit-autofill {
   border: 1px solid $button-text-color;
 }
 
-.btn .custom-control-input:checked ~ .custom-control-label::before {
+.btn .custom-control-input:checked~.custom-control-label::before {
   border: 1px solid $button-text-color;
 }
 
@@ -4185,8 +4202,9 @@ input:-webkit-autofill {
   display: block;
   position: relative;
 }
+
 .has-float-label label,
-.has-float-label > span:last-of-type {
+.has-float-label>span:last-of-type {
   position: absolute;
   cursor: text;
   font-size: 90%;
@@ -4197,8 +4215,9 @@ input:-webkit-autofill {
   line-height: 1;
   padding: 0 1px;
 }
+
 .has-float-label label::after,
-.has-float-label > span::after {
+.has-float-label>span::after {
   content: " ";
   display: block;
   position: absolute;
@@ -4208,29 +4227,35 @@ input:-webkit-autofill {
   right: -0.2em;
   z-index: -1;
 }
+
 .has-float-label .form-control::-webkit-input-placeholder {
   opacity: 1;
 }
+
 .has-float-label .form-control::-moz-placeholder {
   opacity: 1;
 }
+
 .has-float-label .form-control:-ms-input-placeholder {
   opacity: 1;
 }
+
 .has-float-label .form-control::placeholder {
   opacity: 1;
 }
-.has-float-label
-  .form-control:placeholder-shown:not(:focus)::-webkit-input-placeholder {
+
+.has-float-label .form-control:placeholder-shown:not(:focus)::-webkit-input-placeholder {
   opacity: 0;
 }
+
 .has-float-label .form-control:placeholder-shown:not(:focus)::-moz-placeholder {
   opacity: 0;
 }
-.has-float-label
-  .form-control:placeholder-shown:not(:focus):-ms-input-placeholder {
+
+.has-float-label .form-control:placeholder-shown:not(:focus):-ms-input-placeholder {
   opacity: 0;
 }
+
 .has-float-label .form-control:placeholder-shown:not(:focus)::placeholder {
   opacity: 0;
 }
@@ -4255,15 +4280,18 @@ input:-webkit-autofill {
   -ms-flex-pack: center;
   justify-content: center;
 }
+
 .input-group .has-float-label .form-control {
   width: 100%;
 }
+
 .input-group .has-float-label:not(:last-child),
 .input-group .has-float-label:not(:last-child) .form-control {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
   border-right: 0;
 }
+
 .input-group .has-float-label:not(:first-child),
 .input-group .has-float-label:not(:first-child) .form-control {
   border-bottom-left-radius: 0;
@@ -4279,8 +4307,9 @@ input:-webkit-autofill {
   display: block;
   position: relative;
 }
+
 .has-top-label label,
-.has-top-label > span:last-of-type {
+.has-top-label>span:last-of-type {
   position: absolute;
   cursor: text;
   font-size: 76%;
@@ -4292,8 +4321,9 @@ input:-webkit-autofill {
   padding: 0 1px;
   font-weight: 600;
 }
+
 .has-top-label label::after,
-.has-top-label > span::after {
+.has-top-label>span::after {
   content: " ";
   display: block;
   position: absolute;
@@ -4303,29 +4333,35 @@ input:-webkit-autofill {
   right: -0.2em;
   z-index: -1;
 }
+
 .has-top-label .form-control::-webkit-input-placeholder {
   opacity: 1;
 }
+
 .has-top-label .form-control::-moz-placeholder {
   opacity: 1;
 }
+
 .has-top-label .form-control:-ms-input-placeholder {
   opacity: 1;
 }
+
 .has-top-label .form-control::placeholder {
   opacity: 1;
 }
-.has-top-label
-  .form-control:placeholder-shown:not(:focus)::-webkit-input-placeholder {
+
+.has-top-label .form-control:placeholder-shown:not(:focus)::-webkit-input-placeholder {
   opacity: 0;
 }
+
 .has-top-label .form-control:placeholder-shown:not(:focus)::-moz-placeholder {
   opacity: 0;
 }
-.has-top-label
-  .form-control:placeholder-shown:not(:focus):-ms-input-placeholder {
+
+.has-top-label .form-control:placeholder-shown:not(:focus):-ms-input-placeholder {
   opacity: 0;
 }
+
 .has-top-label .form-control:placeholder-shown:not(:focus)::placeholder {
   opacity: 0;
 }
@@ -4350,15 +4386,18 @@ input:-webkit-autofill {
   -ms-flex-pack: center;
   justify-content: center;
 }
+
 .input-group .has-top-label .form-control {
   width: 100%;
 }
+
 .input-group .has-top-label:not(:last-child),
 .input-group .has-top-label:not(:last-child) .form-control {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
   border-right: 0;
 }
+
 .input-group .has-top-label:not(:first-child),
 .input-group .has-top-label:not(:first-child) .form-control {
   border-bottom-left-radius: 0;
@@ -4439,6 +4478,7 @@ div.error:not(.simple-notification) {
   transform: translateX(0);
   top: initial;
   bottom: -33px;
+
   &::before,
   &::after {
     left: initial;
@@ -4465,6 +4505,7 @@ div.error:not(.simple-notification) {
   transform: translateX(0);
   top: initial;
   bottom: -33px;
+
   &::before,
   &::after {
     left: 25px;
@@ -4479,6 +4520,7 @@ div.error:not(.simple-notification) {
   transform: translateX(-50%) translateY(50%);
   bottom: initial;
   top: -17px;
+
   &::before {
     content: "";
     position: absolute;
@@ -4507,6 +4549,7 @@ div.error:not(.simple-notification) {
   right: 0;
   bottom: initial;
   top: -17px;
+
   &::before {
     content: "";
     position: absolute;
@@ -4541,6 +4584,7 @@ div.error:not(.simple-notification) {
   right: initial;
   bottom: initial;
   top: -17px;
+
   &::before {
     content: "";
     position: absolute;
@@ -4608,6 +4652,7 @@ div.error:not(.simple-notification) {
 
 .tooltip-label-right {
   .error-l-0 {
+
     .invalid-tooltip,
     .valid-tooltip,
     div.error {
@@ -4616,6 +4661,7 @@ div.error:not(.simple-notification) {
   }
 
   .error-l-25 {
+
     .invalid-tooltip,
     .valid-tooltip,
     div.error {
@@ -4624,6 +4670,7 @@ div.error:not(.simple-notification) {
   }
 
   .error-l-50 {
+
     .invalid-tooltip,
     .valid-tooltip,
     div.error {
@@ -4632,6 +4679,7 @@ div.error:not(.simple-notification) {
   }
 
   .error-l-75 {
+
     .invalid-tooltip,
     .valid-tooltip,
     div.error {
@@ -4640,6 +4688,7 @@ div.error:not(.simple-notification) {
   }
 
   .error-l-100 {
+
     .invalid-tooltip,
     .valid-tooltip,
     div.error {
@@ -4648,6 +4697,7 @@ div.error:not(.simple-notification) {
   }
 
   .error-l-125 {
+
     .invalid-tooltip,
     .valid-tooltip,
     div.error {
@@ -4656,6 +4706,7 @@ div.error:not(.simple-notification) {
   }
 
   .error-l-150 {
+
     .invalid-tooltip,
     .valid-tooltip,
     div.error {
@@ -4664,6 +4715,7 @@ div.error:not(.simple-notification) {
   }
 
   .error-l-175 {
+
     .invalid-tooltip,
     .valid-tooltip,
     div.error {
@@ -4672,6 +4724,7 @@ div.error:not(.simple-notification) {
   }
 
   .error-l-200 {
+
     .invalid-tooltip,
     .valid-tooltip,
     div.error {
@@ -4680,6 +4733,7 @@ div.error:not(.simple-notification) {
   }
 
   .error-l-225 {
+
     .invalid-tooltip,
     .valid-tooltip,
     div.error {
@@ -4688,6 +4742,7 @@ div.error:not(.simple-notification) {
   }
 
   .error-l-250 {
+
     .invalid-tooltip,
     .valid-tooltip,
     div.error {
@@ -4696,6 +4751,7 @@ div.error:not(.simple-notification) {
   }
 
   .error-l-275 {
+
     .invalid-tooltip,
     .valid-tooltip,
     div.error {
@@ -4704,6 +4760,7 @@ div.error:not(.simple-notification) {
   }
 
   .error-t-negative {
+
     .invalid-tooltip,
     .valid-tooltip,
     div.error {
@@ -4780,30 +4837,28 @@ div.error:not(.simple-notification) {
   border-color: rgba($theme-color-1, 0.6);
 }
 
-.was-validated .custom-control-input:valid ~ .custom-control-label::before,
-.custom-control-input.is-valid ~ .custom-control-label::before {
+.was-validated .custom-control-input:valid~.custom-control-label::before,
+.custom-control-input.is-valid~.custom-control-label::before {
   background: initial;
 }
 
-.was-validated .custom-control-input:valid ~ .custom-control-label,
-.custom-control-input.is-valid ~ .custom-control-label {
+.was-validated .custom-control-input:valid~.custom-control-label,
+.custom-control-input.is-valid~.custom-control-label {
   color: $primary-color;
 }
 
-.was-validated
-  .custom-control-input:valid:checked
-  ~ .custom-control-label::before,
-.custom-control-input.is-valid:checked ~ .custom-control-label::before {
+.was-validated .custom-control-input:valid:checked~.custom-control-label::before,
+.custom-control-input.is-valid:checked~.custom-control-label::before {
   background-color: $theme-color-1;
 }
 
-.was-validated .custom-control-input:invalid ~ .custom-control-label,
-.custom-control-input.is-invalid ~ .custom-control-label {
+.was-validated .custom-control-input:invalid~.custom-control-label,
+.custom-control-input.is-invalid~.custom-control-label {
   color: $primary-color;
 }
 
-.was-validated .custom-control-input:invalid ~ .custom-control-label::before,
-.custom-control-input.is-invalid ~ .custom-control-label::before {
+.was-validated .custom-control-input:invalid~.custom-control-label::before,
+.custom-control-input.is-invalid~.custom-control-label::before {
   background: initial;
 }
 
@@ -4813,9 +4868,7 @@ div.error:not(.simple-notification) {
 }
 
 .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-selected,
-.ng-dropdown-panel
-  .ng-dropdown-panel-items
-  .ng-option.ng-option-selected.ng-option-marked {
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-selected.ng-option-marked {
   background-color: $theme-color-1;
   color: $button-text-color;
 }
@@ -4851,20 +4904,13 @@ div.error:not(.simple-notification) {
   padding-left: 5px;
 }
 
-.ng-select.ng-select-multiple
-  .ng-select-container
-  .ng-value-container
-  .ng-value {
+.ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value {
   background: initial;
   border: 1px solid $separator-color;
   margin-bottom: 2px;
 }
 
-.ng-select.ng-select-multiple
-  .ng-select-container
-  .ng-value-container
-  .ng-value
-  .ng-value-label {
+.ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value .ng-value-label {
   display: inline-block;
   padding: 5px 5px;
 }
@@ -4879,32 +4925,20 @@ div.error:not(.simple-notification) {
   padding-top: 3px;
 }
 
-.ng-select.ng-select-multiple
-  .ng-select-container
-  .ng-value-container
-  .ng-value
-  .ng-value-icon.left {
+.ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value .ng-value-icon.left {
   border-right: initial;
 }
 
-.ng-select.ng-select-multiple
-  .ng-select-container
-  .ng-value-container
-  .ng-value
-  .ng-value-icon {
+.ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value .ng-value-icon {
   padding: 1px 6px 1px 6px;
 }
 
-.ng-select.ng-select-multiple
-  .ng-select-container
-  .ng-value-container
-  .ng-value
-  .ng-value-icon:hover {
+.ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value .ng-value-icon:hover {
   background-color: initial;
   color: $theme-color-1;
 }
 
-.ng-select .ng-select-container .ng-value-container .ng-input > input {
+.ng-select .ng-select-container .ng-value-container .ng-input>input {
   padding-top: 3px;
   color: $primary-color;
 }
@@ -4914,7 +4948,7 @@ div.error:not(.simple-notification) {
   top: 1px;
 }
 
-.ng-select.ng-select-opened > .ng-select-container .ng-arrow {
+.ng-select.ng-select-opened>.ng-select-container .ng-arrow {
   border-color: transparent transparent $separator-color;
   top: -1px;
 }
@@ -4925,19 +4959,17 @@ div.error:not(.simple-notification) {
 
 .ng-select .ng-clear-wrapper {
   color: $separator-color;
+
   &:hover {
     color: $theme-color-1;
+
     .ng-clear {
       color: $theme-color-1;
     }
   }
 }
 
-.ng-select.ng-select-multiple
-  .ng-select-container
-  .ng-value-container
-  .ng-value
-  .ng-value-icon.right {
+.ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value .ng-value-icon.right {
   border: initial;
 }
 
@@ -4946,22 +4978,20 @@ div.error:not(.simple-notification) {
 }
 
 .ng-select .ng-select-container,
-.ng-select.ng-select-opened > .ng-select-container {
+.ng-select.ng-select-opened>.ng-select-container {
   background-color: $foreground-color !important;
 }
 
 .form-group.has-top-label {
   .ng-select .ng-select-container {
     min-height: calc(3.3rem + 2px);
+
     .ng-value-container {
       padding-top: 20px;
     }
   }
 
-  .ng-select.ng-select-single
-    .ng-select-container
-    .ng-value-container
-    .ng-input {
+  .ng-select.ng-select-single .ng-select-container .ng-value-container .ng-input {
     top: 23px;
   }
 }
@@ -4982,6 +5012,7 @@ div.error:not(.simple-notification) {
   font-size: 0.8rem;
   padding: 0.5rem 0.75rem 0.5rem 0.75rem;
 }
+
 .typeahead.dropdown-menu {
   width: 100%;
 
@@ -5010,7 +5041,9 @@ div.error:not(.simple-notification) {
   border: initial;
 }
 
-.bs-datepicker-body table td, .bs-datepicker-body table td span,  .bs-datepicker-head button span {
+.bs-datepicker-body table td,
+.bs-datepicker-body table td span,
+.bs-datepicker-head button span {
   text-align: center !important;
 }
 
@@ -5048,6 +5081,7 @@ div.error:not(.simple-notification) {
 
 .datepicker-inline {
   width: 100%;
+
   bs-datepicker-inline-container,
   .bs-datepicker,
   .bs-datepicker-container,
@@ -5110,12 +5144,13 @@ div.error:not(.simple-notification) {
   border-width: 1px 0px 0 1px !important;
   color: $primary-color !important;
   cursor: pointer;
+
   &:hover {
     color: $theme-color-1 !important;
   }
 }
 
-dropzone > .dropzone.dz-wrapper {
+dropzone>.dropzone.dz-wrapper {
   min-height: 115px !important;
   border: 1px solid $separator-color !important;
   background: $input-background !important;
@@ -5132,8 +5167,8 @@ dropzone > .dropzone.dz-wrapper {
   }
 }
 
-dropzone > .dropzone.dz-clickable .dz-message,
-dropzone > .dropzone.dz-clickable .dz-message * {
+dropzone>.dropzone.dz-clickable .dz-message,
+dropzone>.dropzone.dz-clickable .dz-message * {
   position: relative !important;
   transform: translateY(-50%) !important;
   top: 50% !important;
@@ -5151,7 +5186,7 @@ dropzone > .dropzone.dz-clickable .dz-message * {
   overflow: initial !important;
 }
 
-dropzone > .dropzone.dz-clickable .dz-message div {
+dropzone>.dropzone.dz-clickable .dz-message div {
   top: 55px !important;
   display: inline-block !important;
 }
@@ -5160,8 +5195,8 @@ dropzone > .dropzone.dz-clickable .dz-message div {
   margin: 16px !important;
 }
 
-dropzone > .dropzone .dz-preview.dz-image-preview,
-dropzone > .dropzone .dz-preview.dz-file-preview {
+dropzone>.dropzone .dz-preview.dz-image-preview,
+dropzone>.dropzone .dz-preview.dz-file-preview {
   width: 260px;
   height: 60px;
   min-height: unset;
@@ -5220,13 +5255,7 @@ dropzone > .dropzone .dz-preview.dz-file-preview {
 
     span {
       display: inline-block;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'%3E%3Cpath style='fill:"+encodecolor(
-          $theme-color-1
-        )+";' d='M4.1,23.9A13.51,13.51,0,0,1,0,14,13.52,13.52,0,0,1,4.1,4.1,13.52,13.52,0,0,1,14,0a13.52,13.52,0,0,1,9.9,4.1A13.52,13.52,0,0,1,28,14a13.51,13.51,0,0,1-4.1,9.9A13.52,13.52,0,0,1,14,28,13.52,13.52,0,0,1,4.1,23.9Z'/%3E%3Cpath style='fill:"+encodecolor(
-          $foreground-color
-        )+";' d='M13.13,19.35V6.17a.88.88,0,1,1,1.75,0V19.35Z'/%3E%3Crect style='fill:"+encodecolor(
-          $foreground-color
-        )+";' x='13.13' y='21.07' width='1.75' height='1.64'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'%3E%3Cpath style='fill:" +encodecolor($theme-color-1 )+";' d='M4.1,23.9A13.51,13.51,0,0,1,0,14,13.52,13.52,0,0,1,4.1,4.1,13.52,13.52,0,0,1,14,0a13.52,13.52,0,0,1,9.9,4.1A13.52,13.52,0,0,1,28,14a13.51,13.51,0,0,1-4.1,9.9A13.52,13.52,0,0,1,14,28,13.52,13.52,0,0,1,4.1,23.9Z'/%3E%3Cpath style='fill:" +encodecolor($foreground-color )+";' d='M13.13,19.35V6.17a.88.88,0,1,1,1.75,0V19.35Z'/%3E%3Crect style='fill:" +encodecolor($foreground-color )+";' x='13.13' y='21.07' width='1.75' height='1.64'/%3E%3C/svg%3E");
       width: 28px;
       height: 28px;
     }
@@ -5241,11 +5270,7 @@ dropzone > .dropzone .dz-preview.dz-file-preview {
 
     span {
       display: inline-block;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'%3E%3Cpath style='fill:"+encodecolor(
-          $theme-color-1
-        )+";' d='M4.1,23.9A13.51,13.51,0,0,1,0,14,13.52,13.52,0,0,1,4.1,4.1,13.52,13.52,0,0,1,14,0a13.52,13.52,0,0,1,9.9,4.1A13.52,13.52,0,0,1,28,14a13.51,13.51,0,0,1-4.1,9.9A13.52,13.52,0,0,1,14,28,13.52,13.52,0,0,1,4.1,23.9Z'/%3E%3Cpath style='fill:"+encodecolor(
-          $foreground-color
-        )+";' d='M20.14,8.81A.77.77,0,0,1,21.2,9a.81.81,0,0,1,.25.61.83.83,0,0,1-.25.62L12.48,19l-.11.1a.82.82,0,0,1-1.23,0L6.79,14.74l-.11-.16a.49.49,0,0,1-.08-.18,1.06,1.06,0,0,1,0-.19.61.61,0,0,1,0-.19,1.16,1.16,0,0,1,0-.18,1.26,1.26,0,0,1,.08-.18,1,1,0,0,1,.11-.15.87.87,0,0,1,1.26,0l3.69,3.7L19.94,9A.72.72,0,0,1,20.14,8.81Z'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'%3E%3Cpath style='fill:" +encodecolor($theme-color-1 )+";' d='M4.1,23.9A13.51,13.51,0,0,1,0,14,13.52,13.52,0,0,1,4.1,4.1,13.52,13.52,0,0,1,14,0a13.52,13.52,0,0,1,9.9,4.1A13.52,13.52,0,0,1,28,14a13.51,13.51,0,0,1-4.1,9.9A13.52,13.52,0,0,1,14,28,13.52,13.52,0,0,1,4.1,23.9Z'/%3E%3Cpath style='fill:" +encodecolor($foreground-color )+";' d='M20.14,8.81A.77.77,0,0,1,21.2,9a.81.81,0,0,1,.25.61.83.83,0,0,1-.25.62L12.48,19l-.11.1a.82.82,0,0,1-1.23,0L6.79,14.74l-.11-.16a.49.49,0,0,1-.08-.18,1.06,1.06,0,0,1,0-.19.61.61,0,0,1,0-.19,1.16,1.16,0,0,1,0-.18,1.26,1.26,0,0,1,.08-.18,1,1,0,0,1,.11-.15.87.87,0,0,1,1.26,0l3.69,3.7L19.94,9A.72.72,0,0,1,20.14,8.81Z'/%3E%3C/svg%3E");
       width: 28px;
       height: 28px;
     }
@@ -5288,7 +5313,7 @@ dropzone > .dropzone .dz-preview.dz-file-preview {
   display: none;
 }
 
-dropzone > .dropzone.dz-wrapper.dz-multiple.dz-started .dz-message {
+dropzone>.dropzone.dz-wrapper.dz-multiple.dz-started .dz-message {
   display: none !important;
 }
 
@@ -5412,20 +5437,20 @@ dropzone > .dropzone.dz-wrapper.dz-multiple.dz-started .dz-message {
 }
 
 .form-control-sm,
-.input-group-sm > .form-control,
-.input-group-sm > .input-group-prepend > .input-group-text,
-.input-group-sm > .input-group-append > .input-group-text,
-.input-group-sm > .input-group-prepend > .btn,
-.input-group-sm > .input-group-append > .btn {
+.input-group-sm>.form-control,
+.input-group-sm>.input-group-prepend>.input-group-text,
+.input-group-sm>.input-group-append>.input-group-text,
+.input-group-sm>.input-group-prepend>.btn,
+.input-group-sm>.input-group-append>.btn {
   border-radius: $border-radius;
 }
 
 .form-control-lg,
-.input-group-lg > .form-control,
-.input-group-lg > .input-group-prepend > .input-group-text,
-.input-group-lg > .input-group-append > .input-group-text,
-.input-group-lg > .input-group-prepend > .btn,
-.input-group-lg > .input-group-append > .btn {
+.input-group-lg>.form-control,
+.input-group-lg>.input-group-prepend>.input-group-text,
+.input-group-lg>.input-group-append>.input-group-text,
+.input-group-lg>.input-group-prepend>.btn,
+.input-group-lg>.input-group-append>.btn {
   border-radius: $border-radius;
 }
 
@@ -5438,8 +5463,8 @@ dropzone > .dropzone.dz-wrapper.dz-multiple.dz-started .dz-message {
   border-color: $separator-color;
 }
 
-.input-group > .form-control:not(:first-child),
-.input-group > .custom-select:not(:first-child) {
+.input-group>.form-control:not(:first-child),
+.input-group>.custom-select:not(:first-child) {
   outline: initial !important;
   box-shadow: initial !important;
 }
@@ -5474,20 +5499,20 @@ select.form-control {
   border-color: rgba($theme-color-1, 0.6);
 }
 
-.custom-file-input:focus ~ .custom-file-label {
+.custom-file-input:focus~.custom-file-label {
   border-color: rgba($theme-color-1, 0.6);
   box-shadow: initial;
 }
 
-.custom-file-input:focus ~ .custom-file-label::after {
+.custom-file-input:focus~.custom-file-label::after {
   border-color: rgba($theme-color-1, 0.6);
 }
 
 .custom-file-label:after,
-.input-group > .custom-select:not(:first-child),
-.input-group > .custom-select:not(:last-child),
-.input-group > .form-control:not(:first-child),
-.input-group > .form-control:not(:last-child) {
+.input-group>.custom-select:not(:first-child),
+.input-group>.custom-select:not(:last-child),
+.input-group>.form-control:not(:first-child),
+.input-group>.form-control:not(:last-child) {
   outline: initial !important;
   box-shadow: initial !important;
 }
@@ -5500,43 +5525,40 @@ select.form-control {
   background: transparent;
 }
 
-.input-group > .custom-select:not(:first-child),
-.input-group > .form-control:not(:first-child) {
+.input-group>.custom-select:not(:first-child),
+.input-group>.form-control:not(:first-child) {
   background: $foreground-color;
   color: $primary-color;
   border-color: $separator-color;
 }
 
-.input-group > .form-control:not(:last-child),
-.input-group > .custom-select:not(:last-child) {
+.input-group>.form-control:not(:last-child),
+.input-group>.custom-select:not(:last-child) {
   background: $foreground-color;
   color: $primary-color;
   border-color: $separator-color;
 }
 
-.input-group > .input-group-prepend > .btn-group .btn {
+.input-group>.input-group-prepend>.btn-group .btn {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.input-group > .input-group-append > .btn-group .btn {
+.input-group>.input-group-append>.btn-group .btn {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.input-group
-  > .input-group-prepend:first-child
-  > .btn-group:not(:first-child)
-  .btn {
+.input-group>.input-group-prepend:first-child>.btn-group:not(:first-child) .btn {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.input-group-prepend .btn + .btn-group .btn {
+.input-group-prepend .btn+.btn-group .btn {
   margin-left: -1px;
 }
 
-.input-group-append .btn + .btn-group .btn {
+.input-group-append .btn+.btn-group .btn {
   margin-left: -1px;
 }
 
@@ -5545,17 +5567,12 @@ select.form-control {
 }
 
 /* 21.Form Wizard */
-aw-wizard-navigation-bar.horizontal.small
-  ul.steps-indicator
-  li
-  .step-indicator {
+aw-wizard-navigation-bar.horizontal.small ul.steps-indicator li .step-indicator {
   top: initial;
   bottom: -17px;
 }
 
-aw-wizard-navigation-bar.horizontal.small
-  ul.steps-indicator
-  li:not(:last-child):before {
+aw-wizard-navigation-bar.horizontal.small ul.steps-indicator li:not(:last-child):before {
   top: initial;
   bottom: -9px;
 }
@@ -5570,41 +5587,27 @@ aw-wizard-navigation-bar ul.steps-indicator li a .label {
   text-transform: initial;
 }
 
-aw-wizard-navigation-bar.horizontal.small
-  ul.steps-indicator
-  li.optional
-  .step-indicator,
+aw-wizard-navigation-bar.horizontal.small ul.steps-indicator li.optional .step-indicator,
 aw-wizard-navigation-bar.horizontal.small ul.steps-indicator li .step-indicator,
 aw-wizard-navigation-bar.vertical.small ul.steps-indicator li .step-indicator {
   background-color: $separator-color-light;
   border: 4px solid $separator-color-light;
   width: 19px !important;
   height: 19px !important;
+
   &:after {
     content: "";
     background: initial;
   }
 }
 
-aw-wizard-navigation-bar.horizontal.small
-  ul.steps-indicator
-  li.navigable
-  a:hover
-  .step-indicator,
-aw-wizard-navigation-bar.vertical.small
-  ul.steps-indicator
-  li.navigable
-  a:hover
-  .step-indicator {
+aw-wizard-navigation-bar.horizontal.small ul.steps-indicator li.navigable a:hover .step-indicator,
+aw-wizard-navigation-bar.vertical.small ul.steps-indicator li.navigable a:hover .step-indicator {
   background-color: $separator-color-light !important;
 }
 
-aw-wizard-navigation-bar.horizontal.small
-  ul.steps-indicator
-  li:not(:last-child):before,
-aw-wizard-navigation-bar.vertical.small
-  ul.steps-indicator
-  li:not(:last-child):before {
+aw-wizard-navigation-bar.horizontal.small ul.steps-indicator li:not(:last-child):before,
+aw-wizard-navigation-bar.vertical.small ul.steps-indicator li:not(:last-child):before {
   background-color: $separator-color-light;
 }
 
@@ -5614,37 +5617,25 @@ aw-wizard-navigation-bar.vertical ul.steps-indicator li a .label {
   padding-bottom: 10px;
 }
 
-aw-wizard-navigation-bar.horizontal.small
-  ul.steps-indicator
-  li.done
-  .step-indicator,
-aw-wizard-navigation-bar.vertical.small
-  ul.steps-indicator
-  li.done
-  .step-indicator {
+aw-wizard-navigation-bar.horizontal.small ul.steps-indicator li.done .step-indicator,
+aw-wizard-navigation-bar.vertical.small ul.steps-indicator li.done .step-indicator {
   background-color: $separator-color-light;
+
   &:after {
     content: " ";
     position: relative;
     background: initial;
     width: 12px;
     height: 12px;
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='"+encodecolor(
-        $theme-color-1
-      )+"' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='" +encodecolor($theme-color-1 )+"' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
     display: block;
   }
 }
 
-aw-wizard-navigation-bar.horizontal.small
-  ul.steps-indicator
-  li.current
-  .step-indicator,
-aw-wizard-navigation-bar.vertical.small
-  ul.steps-indicator
-  li.current
-  .step-indicator {
+aw-wizard-navigation-bar.horizontal.small ul.steps-indicator li.current .step-indicator,
+aw-wizard-navigation-bar.vertical.small ul.steps-indicator li.current .step-indicator {
   background-color: $theme-color-1;
+
   &:after {
     content: "";
     background: initial;
@@ -5668,16 +5659,11 @@ aw-wizard-navigation-bar.horizontal.large-empty-symbols ul.steps-indicator {
   padding-bottom: 15px;
 }
 
-aw-wizard-navigation-bar.vertical.small
-  ul.steps-indicator
-  li:not(:last-child):before {
+aw-wizard-navigation-bar.vertical.small ul.steps-indicator li:not(:last-child):before {
   left: -5px;
 }
 
-aw-wizard-navigation-bar.horizontal.large-empty-symbols
-  ul.steps-indicator
-  li
-  .step-indicator {
+aw-wizard-navigation-bar.horizontal.large-empty-symbols ul.steps-indicator li .step-indicator {
   border-width: 1px !important;
   left: calc(50% - 20px) !important;
   width: 40px !important;
@@ -5688,66 +5674,40 @@ aw-wizard-navigation-bar.horizontal.large-empty-symbols
   font-size: 16px;
 }
 
-aw-wizard-navigation-bar.horizontal.large-empty-symbols
-  ul.steps-indicator
-  li
-  a
-  .label {
+aw-wizard-navigation-bar.horizontal.large-empty-symbols ul.steps-indicator li a .label {
   padding-top: 10px;
   padding-bottom: 0px;
 }
 
-aw-wizard-navigation-bar.horizontal.large-empty-symbols
-  ul.steps-indicator
-  li:not(:last-child):before {
+aw-wizard-navigation-bar.horizontal.large-empty-symbols ul.steps-indicator li:not(:last-child):before {
   background-color: $separator-color-light;
   width: calc(100% - 40px);
   top: -20px;
   left: calc(50% + 20px);
 }
 
-aw-wizard-navigation-bar.horizontal.large-empty-symbols
-  ul.steps-indicator
-  li.editing
-  .step-indicator {
+aw-wizard-navigation-bar.horizontal.large-empty-symbols ul.steps-indicator li.editing .step-indicator {
   border-color: $theme-color-1;
   color: $theme-color-1;
 }
 
-aw-wizard-navigation-bar.horizontal.large-empty-symbols
-  ul.steps-indicator
-  li.current
-  .step-indicator {
+aw-wizard-navigation-bar.horizontal.large-empty-symbols ul.steps-indicator li.current .step-indicator {
   border-color: $theme-color-1;
   color: $theme-color-1;
 }
 
-aw-wizard-navigation-bar.horizontal.large-empty-symbols
-  ul.steps-indicator
-  li.done
-  .step-indicator {
+aw-wizard-navigation-bar.horizontal.large-empty-symbols ul.steps-indicator li.done .step-indicator {
   color: $separator-color;
   border-color: $separator-color;
 }
 
-aw-wizard-navigation-bar.horizontal.large-empty-symbols
-  ul.steps-indicator
-  li.done.current
-  .step-indicator {
+aw-wizard-navigation-bar.horizontal.large-empty-symbols ul.steps-indicator li.done.current .step-indicator {
   border-color: $theme-color-1;
   color: $theme-color-1;
 }
 
-aw-wizard-navigation-bar.horizontal.large-empty-symbols
-  ul.steps-indicator
-  li.navigable
-  a:hover
-  .step-indicator,
-aw-wizard-navigation-bar.horizontal.large-empty-symbols
-  ul.steps-indicator
-  li.navigable.done
-  a:hover
-  .step-indicator {
+aw-wizard-navigation-bar.horizontal.large-empty-symbols ul.steps-indicator li.navigable a:hover .step-indicator,
+aw-wizard-navigation-bar.horizontal.large-empty-symbols ul.steps-indicator li.navigable.done a:hover .step-indicator {
   border-color: $theme-color-1;
   color: $theme-color-1;
 }
@@ -5795,7 +5755,7 @@ aw-wizard-navigation-bar.horizontal.large-empty-symbols
 
 /* 23.Navs */
 .nav-pills .nav-link.active,
-.nav-pills .show > .nav-link {
+.nav-pills .show>.nav-link {
   color: $foreground-color !important;
   background-color: $theme-color-1;
 }
@@ -5948,6 +5908,7 @@ aw-wizard-navigation-bar.horizontal.large-empty-symbols
     }
   }
 }
+
 /* 24.Tooltip and popover */
 .popover {
   border-radius: $border-radius;
@@ -6169,6 +6130,7 @@ div.dataTables_wrapper div.dataTables_filter input {
 .progress-bar {
   background-color: $theme-color-1;
 }
+
 .progressbar-text {
   position: absolute;
   left: 0;
@@ -6209,12 +6171,10 @@ div.dataTables_wrapper div.dataTables_filter input {
 
 .progress-banner {
   height: 200px;
-  background-image: linear-gradient(
-    to right top,
-    $gradient-color-2,
-    $gradient-color-3,
-    $gradient-color-1
-  ) !important;
+  background-image: linear-gradient(to right top,
+      $gradient-color-2,
+      $gradient-color-3,
+      $gradient-color-1 ) !important;
   transition: 0.5s;
   background-size: 200% auto;
   cursor: pointer;
@@ -6250,6 +6210,7 @@ div.dataTables_wrapper div.dataTables_filter input {
   }
 
   .progress-bar-banner {
+
     svg path:first-of-type,
     svg circle:first-of-type {
       stroke: darken($theme-color-1, 15%) !important;
@@ -6328,7 +6289,7 @@ rating span {
     text-align: center;
   }
 
-  .spinner > div {
+  .spinner>div {
     width: 6px;
     height: 6px;
     background-color: $button-text-color;
@@ -6348,7 +6309,9 @@ rating span {
     animation-delay: -0.16s;
   }
 }
+
 @-webkit-keyframes sk-bouncedelay {
+
   0%,
   80%,
   100% {
@@ -6363,6 +6326,7 @@ rating span {
 }
 
 @keyframes sk-bouncedelay {
+
   0%,
   80%,
   100% {
@@ -6380,6 +6344,7 @@ rating span {
 
 /* 29.Modal */
 .modal {
+
   .modal-header,
   .modal-body,
   .modal-footer {
@@ -7121,6 +7086,7 @@ i.large-icon {
 
 .large-icon.initial-height {
   line-height: initial;
+
   @include respond-below(sm) {
     line-height: initial;
   }
@@ -7130,6 +7096,7 @@ i.large-icon {
 .table {
   color: $primary-color;
 }
+
 .table th,
 .table td {
   border-color: $separator-color-light !important;
@@ -7279,6 +7246,7 @@ i.large-icon {
 .gallery-page.row {
   margin-left: -5px;
   margin-right: -5px;
+
   [class*="col-"] {
     margin-bottom: 10px;
     padding-left: 5px;
@@ -7288,6 +7256,7 @@ i.large-icon {
 
 .col-left {
   padding-right: 20px;
+
   @include respond-below(md) {
     padding-right: 15px;
   }
@@ -7295,6 +7264,7 @@ i.large-icon {
 
 .col-right {
   padding-left: 20px;
+
   @include respond-below(md) {
     padding-left: 15px;
   }
@@ -7315,6 +7285,7 @@ i.large-icon {
   cursor: pointer;
   width: 340px;
   margin: 0 auto;
+
   @include respond-below(sm) {
     width: 300px;
   }
@@ -7327,6 +7298,7 @@ i.large-icon {
     text-align: center;
     opacity: 0.4;
     transition: opacity $animation-time-short;
+
     &.active,
     &:hover {
       opacity: 1;
@@ -7381,6 +7353,7 @@ i.large-icon {
 
 .glide__slides {
   white-space: initial;
+
   .glide__slide {
     padding-left: 15px;
     padding-right: 15px;
@@ -7392,6 +7365,7 @@ i.large-icon {
 .glide__slide {
   display: flex;
   height: unset;
+
   .card {
     display: flex;
     flex-grow: 1;
@@ -7410,6 +7384,7 @@ i.large-icon {
 
 .slider-nav {
   text-align: center;
+
   .left-arrow,
   .right-arrow {
     padding-top: 7px;
@@ -7441,6 +7416,7 @@ i.large-icon {
   }
 
   .btn {
+
     &:hover,
     &:focus,
     &:active {
@@ -7497,6 +7473,7 @@ i.large-icon {
   cursor: pointer;
   width: 340px;
   margin: 0 auto;
+
   @include respond-below(sm) {
     width: 300px;
   }
@@ -7515,6 +7492,7 @@ i.large-icon {
     transition: opacity $animation-time-short;
     height: 45px;
     object-fit: cover;
+
     &.active,
     &:hover {
       opacity: 1;
@@ -7631,7 +7609,7 @@ i.large-icon {
   margin-top: -28px;
 }
 
-app-profile-who-to-follow app-user-follow:last-of-type > div {
+app-profile-who-to-follow app-user-follow:last-of-type>div {
   border-bottom: initial !important;
 }
 
@@ -7663,20 +7641,25 @@ app-profile-who-to-follow app-user-follow:last-of-type > div {
   .modal .modal-content {
     border-radius: $border-radius-rounded;
   }
+
   .simple-notification {
     border-radius: $border-radius-rounded;
   }
+
   .popover,
   .tooltip-inner {
     border-radius: $border-radius-rounded;
   }
+
   .border-radius {
     border-radius: $border-radius-rounded;
   }
+
   .vjs-poster,
   .vjs-tech {
     border-radius: $border-radius-rounded;
   }
+
   .best-rated-items .owl-stage img {
     border-radius: $border-radius-rounded;
   }
@@ -7701,11 +7684,9 @@ app-profile-who-to-follow app-user-follow:last-of-type > div {
       border-top-right-radius: $border-radius-rounded;
     }
 
-    @include respond-below(sm) {
-    }
+    @include respond-below(sm) {}
 
-    @include respond-below(xs) {
-    }
+    @include respond-below(xs) {}
   }
 
   .card-img,
@@ -7716,7 +7697,7 @@ app-profile-who-to-follow app-user-follow:last-of-type > div {
 
   .sub-hidden .main-menu,
   .menu-sub-hidden .main-menu {
-    border-radius: 0 $border-radius-rounded $border-radius-rounded 0;
+    // border-radius: 0 $border-radius-rounded $border-radius-rounded 0;
   }
 
   .sub-show-temporary .main-menu {
@@ -7797,6 +7778,7 @@ app-profile-who-to-follow app-user-follow:last-of-type > div {
 
       td {
         background: $foreground-color;
+
         &:first-child {
           border-top-left-radius: $border-radius-rounded;
           border-bottom-left-radius: $border-radius-rounded;
@@ -7834,9 +7816,10 @@ app-profile-who-to-follow app-user-follow:last-of-type > div {
     padding-right: 0;
   }
 
-  .breadcrumb-item + .breadcrumb-item {
+  .breadcrumb-item+.breadcrumb-item {
     padding-left: initial;
     padding-right: 0.5rem;
+
     &::before {
       padding-left: 0.5rem;
       padding-right: initial;
@@ -7869,12 +7852,13 @@ app-profile-who-to-follow app-user-follow:last-of-type > div {
     left: initial !important;
   }
 
-  .btn-group > .btn:first-child {
+  .btn-group>.btn:first-child {
     margin-left: -1px;
   }
 
   .top-right-button-container {
     float: left;
+
     @include respond-below(xs) {
       float: initial;
     }
@@ -7883,6 +7867,7 @@ app-profile-who-to-follow app-user-follow:last-of-type > div {
   .col-left {
     padding-left: 20px;
     padding-right: 15px;
+
     @include respond-below(md) {
       padding-left: 15px;
     }
@@ -7891,6 +7876,7 @@ app-profile-who-to-follow app-user-follow:last-of-type > div {
   .col-right {
     padding-right: 20px;
     padding-left: 15px;
+
     @include respond-below(md) {
       padding-right: 15px;
     }
@@ -7930,16 +7916,12 @@ app-profile-who-to-follow app-user-follow:last-of-type > div {
     margin-right: 2px;
   }
 
-  .input-group
-    > .input-group-append:last-child
-    > .btn:not(:last-child):not(.dropdown-toggle),
-  .input-group
-    > .input-group-append:last-child
-    > .input-group-text:not(:last-child),
-  .input-group > .input-group-append:not(:last-child) > .btn,
-  .input-group > .input-group-append:not(:last-child) > .input-group-text,
-  .input-group > .input-group-prepend > .btn,
-  .input-group > .input-group-prepend > .input-group-text {
+  .input-group>.input-group-append:last-child>.btn:not(:last-child):not(.dropdown-toggle),
+  .input-group>.input-group-append:last-child>.input-group-text:not(:last-child),
+  .input-group>.input-group-append:not(:last-child)>.btn,
+  .input-group>.input-group-append:not(:last-child)>.input-group-text,
+  .input-group>.input-group-prepend>.btn,
+  .input-group>.input-group-prepend>.input-group-text {
     border-radius: $border-radius;
   }
 
@@ -7952,26 +7934,24 @@ app-profile-who-to-follow app-user-follow:last-of-type > div {
     border-radius: 40px !important;
   }
 
-  .input-group-append .btn + .btn,
-  .input-group-append .btn + .input-group-text,
-  .input-group-append .input-group-text + .btn,
-  .input-group-append .input-group-text + .input-group-text,
-  .input-group-prepend .btn + .btn,
-  .input-group-prepend .btn + .input-group-text,
-  .input-group-prepend .input-group-text + .btn,
-  .input-group-prepend .input-group-text + .input-group-text {
+  .input-group-append .btn+.btn,
+  .input-group-append .btn+.input-group-text,
+  .input-group-append .input-group-text+.btn,
+  .input-group-append .input-group-text+.input-group-text,
+  .input-group-prepend .btn+.btn,
+  .input-group-prepend .btn+.input-group-text,
+  .input-group-prepend .input-group-text+.btn,
+  .input-group-prepend .input-group-text+.input-group-text {
     margin-left: 0px;
     margin-right: -1px;
   }
 
-  .input-group > .input-group-append > .btn,
-  .input-group > .input-group-append > .input-group-text,
-  .input-group > .input-group-prepend:first-child > .btn:not(:first-child),
-  .input-group
-    > .input-group-prepend:first-child
-    > .input-group-text:not(:first-child),
-  .input-group > .input-group-prepend:not(:first-child) > .btn,
-  .input-group > .input-group-prepend:not(:first-child) > .input-group-text {
+  .input-group>.input-group-append>.btn,
+  .input-group>.input-group-append>.input-group-text,
+  .input-group>.input-group-prepend:first-child>.btn:not(:first-child),
+  .input-group>.input-group-prepend:first-child>.input-group-text:not(:first-child),
+  .input-group>.input-group-prepend:not(:first-child)>.btn,
+  .input-group>.input-group-prepend:not(:first-child)>.input-group-text {
     border-radius: $border-radius;
   }
 
@@ -7984,62 +7964,50 @@ app-profile-who-to-follow app-user-follow:last-of-type > div {
     margin-left: -1px;
   }
 
-  .input-group
-    > .input-group-append:last-child
-    > .btn:not(:last-child):not(.dropdown-toggle),
-  .input-group
-    > .input-group-append:last-child
-    > .input-group-text:not(:last-child),
-  .input-group > .input-group-append:not(:last-child) > .btn,
-  .input-group > .input-group-append:not(:last-child) > .input-group-text,
-  .input-group > .input-group-prepend > .btn,
-  .input-group > .input-group-prepend > .input-group-text {
+  .input-group>.input-group-append:last-child>.btn:not(:last-child):not(.dropdown-toggle),
+  .input-group>.input-group-append:last-child>.input-group-text:not(:last-child),
+  .input-group>.input-group-append:not(:last-child)>.btn,
+  .input-group>.input-group-append:not(:last-child)>.input-group-text,
+  .input-group>.input-group-prepend>.btn,
+  .input-group>.input-group-prepend>.input-group-text {
     border-radius: 50px;
   }
 
-  .input-group > .input-group-append > .btn,
-  .input-group > .input-group-append > .input-group-text,
-  .input-group > .input-group-prepend:first-child > .btn:not(:first-child),
-  .input-group
-    > .input-group-prepend:first-child
-    > .input-group-text:not(:first-child),
-  .input-group > .input-group-prepend:not(:first-child) > .btn,
-  .input-group > .input-group-prepend:not(:first-child) > .input-group-text {
+  .input-group>.input-group-append>.btn,
+  .input-group>.input-group-append>.input-group-text,
+  .input-group>.input-group-prepend:first-child>.btn:not(:first-child),
+  .input-group>.input-group-prepend:first-child>.input-group-text:not(:first-child),
+  .input-group>.input-group-prepend:not(:first-child)>.btn,
+  .input-group>.input-group-prepend:not(:first-child)>.input-group-text {
     border-radius: 50px;
   }
 
-  .input-group
-    > .input-group-append:last-child
-    > .btn:not(:last-child):not(.dropdown-toggle),
-  .input-group
-    > .input-group-append:last-child
-    > .input-group-text:not(:last-child),
-  .input-group > .input-group-append:not(:last-child) > .btn,
-  .input-group > .input-group-append:not(:last-child) > .input-group-text,
-  .input-group > .input-group-prepend > .btn,
-  .input-group > .input-group-prepend > .input-group-text {
+  .input-group>.input-group-append:last-child>.btn:not(:last-child):not(.dropdown-toggle),
+  .input-group>.input-group-append:last-child>.input-group-text:not(:last-child),
+  .input-group>.input-group-append:not(:last-child)>.btn,
+  .input-group>.input-group-append:not(:last-child)>.input-group-text,
+  .input-group>.input-group-prepend>.btn,
+  .input-group>.input-group-prepend>.input-group-text {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
 
-  .input-group > .input-group-prepend:first-child > .btn:not(:first-child) {
+  .input-group>.input-group-prepend:first-child>.btn:not(:first-child) {
     border-radius: 0 !important;
   }
 
-  .input-group > .input-group-append > .btn {
+  .input-group>.input-group-append>.btn {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
 
-  .input-group
-    > .input-group-append:last-child
-    > .btn:not(:last-child):not(.dropdown-toggle) {
+  .input-group>.input-group-append:last-child>.btn:not(:last-child):not(.dropdown-toggle) {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
 
-  .sw-main.sw-theme-check > ul.step-anchor > li > a:after,
-  .sw-main.sw-theme-dots > ul.step-anchor > li > a:after {
+  .sw-main.sw-theme-check>ul.step-anchor>li>a:after,
+  .sw-main.sw-theme-dots>ul.step-anchor>li>a:after {
     left: 0;
     right: 50%;
     transform: translateX(50%);
@@ -8084,6 +8052,7 @@ app-profile-who-to-follow app-user-follow:last-of-type > div {
     border-right: 5px solid transparent;
     border-left: 5px solid $theme-color-1;
   }
+
   .tooltip-label-right .invalid-tooltip,
   .tooltip-label-right .valid-tooltip,
   .tooltip-label-right div.error {
@@ -8093,6 +8062,7 @@ app-profile-who-to-follow app-user-follow:last-of-type > div {
 
   .tooltip-label-right {
     .error-l-0 {
+
       .invalid-tooltip,
       .valid-tooltip,
       div.error {
@@ -8102,6 +8072,7 @@ app-profile-who-to-follow app-user-follow:last-of-type > div {
     }
 
     .error-l-25 {
+
       .invalid-tooltip,
       .valid-tooltip,
       div.error {
@@ -8111,6 +8082,7 @@ app-profile-who-to-follow app-user-follow:last-of-type > div {
     }
 
     .error-l-50 {
+
       .invalid-tooltip,
       .valid-tooltip,
       div.error {
@@ -8120,6 +8092,7 @@ app-profile-who-to-follow app-user-follow:last-of-type > div {
     }
 
     .error-l-75 {
+
       .invalid-tooltip,
       .valid-tooltip,
       div.error {
@@ -8129,6 +8102,7 @@ app-profile-who-to-follow app-user-follow:last-of-type > div {
     }
 
     .error-l-100 {
+
       .invalid-tooltip,
       .valid-tooltip,
       div.error {
@@ -8138,6 +8112,7 @@ app-profile-who-to-follow app-user-follow:last-of-type > div {
     }
 
     .error-l-125 {
+
       .invalid-tooltip,
       .valid-tooltip,
       div.error {
@@ -8147,6 +8122,7 @@ app-profile-who-to-follow app-user-follow:last-of-type > div {
     }
 
     .error-l-150 {
+
       .invalid-tooltip,
       .valid-tooltip,
       div.error {
@@ -8156,6 +8132,7 @@ app-profile-who-to-follow app-user-follow:last-of-type > div {
     }
 
     .error-l-175 {
+
       .invalid-tooltip,
       .valid-tooltip,
       div.error {
@@ -8165,6 +8142,7 @@ app-profile-who-to-follow app-user-follow:last-of-type > div {
     }
 
     .error-l-200 {
+
       .invalid-tooltip,
       .valid-tooltip,
       div.error {
@@ -8174,6 +8152,7 @@ app-profile-who-to-follow app-user-follow:last-of-type > div {
     }
 
     .error-l-225 {
+
       .invalid-tooltip,
       .valid-tooltip,
       div.error {
@@ -8183,6 +8162,7 @@ app-profile-who-to-follow app-user-follow:last-of-type > div {
     }
 
     .error-l-250 {
+
       .invalid-tooltip,
       .valid-tooltip,
       div.error {
@@ -8192,6 +8172,7 @@ app-profile-who-to-follow app-user-follow:last-of-type > div {
     }
 
     .error-l-275 {
+
       .invalid-tooltip,
       .valid-tooltip,
       div.error {
@@ -8200,40 +8181,30 @@ app-profile-who-to-follow app-user-follow:last-of-type > div {
       }
     }
   }
+
   .invalid-icon,
   .valid-icon {
     right: initial;
     left: 4px;
   }
 
-  .ngx-datatable.fixed-header
-    .datatable-header
-    .datatable-header-inner
-    .datatable-header-cell.sortable
-    .datatable-header-cell-template-wrap {
+  .ngx-datatable.fixed-header .datatable-header .datatable-header-inner .datatable-header-cell.sortable .datatable-header-cell-template-wrap {
     padding-right: 0;
     padding-left: 30px;
   }
 
-  .ngx-datatable.fixed-header
-    .datatable-header
-    .datatable-header-inner
-    .datatable-header-cell.sortable
-    .datatable-header-cell-template-wrap:before {
+  .ngx-datatable.fixed-header .datatable-header .datatable-header-inner .datatable-header-cell.sortable .datatable-header-cell-template-wrap:before {
     right: initial;
     left: 3em;
   }
 
-  .ngx-datatable.fixed-header
-    .datatable-header
-    .datatable-header-inner
-    .datatable-header-cell.sortable
-    .datatable-header-cell-template-wrap:after {
+  .ngx-datatable.fixed-header .datatable-header .datatable-header-inner .datatable-header-cell.sortable .datatable-header-cell-template-wrap:after {
     right: initial;
     left: 2.5em;
   }
 
-  .data-table-rows .ngx-datatable.fixed-row .datatable-scroll .datatable-body-row .datatable-body-cell, .data-table-rows .ngx-datatable.fixed-row .datatable-scroll .datatable-body-row .datatable-body-group-cell {
+  .data-table-rows .ngx-datatable.fixed-row .datatable-scroll .datatable-body-row .datatable-body-cell,
+  .data-table-rows .ngx-datatable.fixed-row .datatable-scroll .datatable-body-row .datatable-body-group-cell {
     padding-right: 1.5rem;
     padding-left: initial;
   }
@@ -8275,12 +8246,12 @@ app-profile-who-to-follow app-user-follow:last-of-type > div {
     direction: rtl;
   }
 
-  .btn-group > .btn:not(:first-child),
-  .btn-group > .btn-group:not(:first-child) > .btn {
+  .btn-group>.btn:not(:first-child),
+  .btn-group>.btn-group:not(:first-child)>.btn {
     border-radius: initial;
   }
 
-  .btn-group > .btn:first-child {
+  .btn-group>.btn:first-child {
     border-top-right-radius: 50px !important;
     border-bottom-right-radius: 50px !important;
     border-top-left-radius: 0 !important;
@@ -8332,7 +8303,9 @@ app-profile-who-to-follow app-user-follow:last-of-type > div {
 
   .custom-control.custom-switch {
     padding-right: 2rem;
-    .custom-control-label::after, .custom-control-label::before {
+
+    .custom-control-label::after,
+    .custom-control-label::before {
       right: -2rem;
     }
 
@@ -8461,6 +8434,7 @@ app-profile-who-to-follow app-user-follow:last-of-type > div {
     .float-xxl-left {
       float: right !important;
     }
+
     .float-xxl-right {
       float: left !important;
     }
@@ -8470,6 +8444,7 @@ app-profile-who-to-follow app-user-follow:last-of-type > div {
     .float-xl-left {
       float: right !important;
     }
+
     .float-xl-right {
       float: left !important;
     }
@@ -8479,6 +8454,7 @@ app-profile-who-to-follow app-user-follow:last-of-type > div {
     .float-lg-left {
       float: right !important;
     }
+
     .float-lg-right {
       float: left !important;
     }
@@ -8488,6 +8464,7 @@ app-profile-who-to-follow app-user-follow:last-of-type > div {
     .float-md-left {
       float: right !important;
     }
+
     .float-md-right {
       float: left !important;
     }
@@ -8497,6 +8474,7 @@ app-profile-who-to-follow app-user-follow:last-of-type > div {
     .float-sm-left {
       float: right !important;
     }
+
     .float-sm-right {
       float: left !important;
     }
@@ -8506,6 +8484,7 @@ app-profile-who-to-follow app-user-follow:last-of-type > div {
     .float-xs-left {
       float: right !important;
     }
+
     .float-xs-right {
       float: left !important;
     }
@@ -8544,21 +8523,21 @@ app-profile-who-to-follow app-user-follow:last-of-type > div {
   }
 
   .has-float-label label,
-  .has-float-label > span:last-of-type {
+  .has-float-label>span:last-of-type {
     right: 0.75rem;
     left: initial;
   }
 
   .has-top-label label,
-  .has-top-label > span:last-of-type {
+  .has-top-label>span:last-of-type {
     right: 0.75rem;
     left: initial;
   }
 
   .has-top-label label,
-  .has-top-label > span,
+  .has-top-label>span,
   .has-float-label label,
-  .has-float-label > span {
+  .has-float-label>span {
     color: rgba($primary-color, 0.7);
   }
 
@@ -8566,24 +8545,26 @@ app-profile-who-to-follow app-user-follow:last-of-type > div {
     text-align: center;
   }
 
-  .custom-switch .custom-switch-input + .custom-switch-btn:after {
+  .custom-switch .custom-switch-input+.custom-switch-btn:after {
     left: 0;
   }
 
-  .custom-switch .custom-switch-input:checked + .custom-switch-btn:after {
+  .custom-switch .custom-switch-input:checked+.custom-switch-btn:after {
     left: -28px;
   }
 
-  .custom-switch-small .custom-switch-input:checked + .custom-switch-btn:after {
+  .custom-switch-small .custom-switch-input:checked+.custom-switch-btn:after {
     left: -18px;
   }
 
   .bootstrap-tagsinput .tag {
     padding-right: 10px;
     padding-left: 20px;
+
     span {
       margin-left: 0px;
       position: relative;
+
       &:after {
         position: absolute;
         top: -2px;
@@ -8605,12 +8586,12 @@ app-profile-who-to-follow app-user-follow:last-of-type > div {
     left: 0 !important;
   }
 
-  perfect-scrollbar > .ps.ps--active-y > .ps__rail-y {
+  perfect-scrollbar>.ps.ps--active-y>.ps__rail-y {
     right: initial !important;
     left: 0 !important;
   }
 
-  perfect-scrollbar > .ps {
+  perfect-scrollbar>.ps {
     margin-left: -15px;
     padding-left: 15px;
     margin-right: -10px;
@@ -8633,10 +8614,12 @@ app-profile-who-to-follow app-user-follow:last-of-type > div {
 
 
   .modal {
+
     .modal-header,
     .modal-body,
     .modal-footer {
       padding: 1.75rem;
+
       @include respond-below(xs) {
         padding: 1.5rem;
       }
@@ -8646,6 +8629,7 @@ app-profile-who-to-follow app-user-follow:last-of-type > div {
   .select-from-library {
     .modal-body.scroll {
       margin-left: 0;
+
       .ps__rail-y {
         left: 10px !important;
       }
@@ -8654,6 +8638,7 @@ app-profile-who-to-follow app-user-follow:last-of-type > div {
     .sfl-item-container {
       .card-body {
         padding-right: 1.75rem !important;
+
         @include respond-below(xs) {
           padding: 1.5rem !important;
         }
@@ -8684,6 +8669,7 @@ app-profile-who-to-follow app-user-follow:last-of-type > div {
 
   .chart {
     direction: ltr;
+
     canvas {
       direction: rtl;
     }
@@ -8899,6 +8885,7 @@ app-profile-who-to-follow app-user-follow:last-of-type > div {
       .header-icons {
         margin-right: initial;
         margin-left: 0.5rem;
+
         @include respond-below(xs) {
           margin-left: 0;
         }
@@ -9141,6 +9128,7 @@ app-profile-who-to-follow app-user-follow:last-of-type > div {
     main {
       margin-right: $main-margin + $sub-menu-width;
     }
+
     &.menu-hidden {
       main {
         margin-right: $main-margin;
@@ -9149,6 +9137,7 @@ app-profile-who-to-follow app-user-follow:last-of-type > div {
   }
 
   @include respond-below(xl) {
+
     .sub-hidden main,
     .menu-sub-hidden main,
     .menu-hidden main {
@@ -9164,6 +9153,7 @@ app-profile-who-to-follow app-user-follow:last-of-type > div {
       main {
         margin-right: $main-margin-lg + $sub-menu-width-lg;
       }
+
       &.menu-hidden {
         main {
           margin-right: $main-margin-lg;
@@ -9173,6 +9163,7 @@ app-profile-who-to-follow app-user-follow:last-of-type > div {
   }
 
   @include respond-below(lg) {
+
     .sub-hidden main,
     .menu-sub-hidden main,
     .menu-hidden main {
@@ -9188,6 +9179,7 @@ app-profile-who-to-follow app-user-follow:last-of-type > div {
       main {
         margin-right: $main-margin-md + $sub-menu-width-md;
       }
+
       &.menu-hidden {
         main {
           margin-right: $main-margin-md;
@@ -9274,6 +9266,7 @@ app-profile-who-to-follow app-user-follow:last-of-type > div {
       table {
         td {
           border-radius: initial;
+
           &:first-child {
             border-top-right-radius: $border-radius-rounded;
             border-bottom-right-radius: $border-radius-rounded;
@@ -9313,6 +9306,7 @@ body {
 
   &.no-footer {
     padding-bottom: initial;
+
     footer {
       display: none;
     }
@@ -9340,7 +9334,7 @@ footer.page-footer {
     padding-right: 0;
   }
 
-  .breadcrumb-item + .breadcrumb-item::before {
+  .breadcrumb-item+.breadcrumb-item::before {
     color: $theme-color-1;
   }
 
@@ -9373,6 +9367,7 @@ footer.page-footer {
 .right-menu {
   footer.page-footer {
     padding-right: $app-menu-width;
+
     @include respond-below(lg) {
       padding-right: 0;
     }
@@ -9380,6 +9375,7 @@ footer.page-footer {
 }
 
 #app-container {
+
   &.sub-hidden .footer-content,
   &.menu-sub-hidden .footer-content,
   &.menu-hidden .footer-content {
@@ -9395,6 +9391,7 @@ footer.page-footer {
     .footer-content {
       margin-left: $main-margin + $sub-menu-width;
     }
+
     &.menu-hidden {
       .footer-content {
         margin-left: $main-margin;
@@ -9403,6 +9400,7 @@ footer.page-footer {
   }
 
   @include respond-below(xl) {
+
     &.sub-hidden .footer-content,
     &.menu-sub-hidden .footer-content,
     &.menu-hidden .footer-content {
@@ -9418,6 +9416,7 @@ footer.page-footer {
       .footer-content {
         margin-left: $main-margin-lg + $sub-menu-width-lg;
       }
+
       &.menu-hidden {
         .footer-content {
           margin-left: $main-margin-lg;
@@ -9427,6 +9426,7 @@ footer.page-footer {
   }
 
   @include respond-below(lg) {
+
     &.sub-hidden .footer-content,
     &.menu-sub-hidden .footer-content,
     &.menu-hidden .footer-content {
@@ -9442,6 +9442,7 @@ footer.page-footer {
       .footer-content {
         margin-left: $main-margin-md + $sub-menu-width-md;
       }
+
       &.menu-hidden {
         .footer-content {
           margin-left: $main-margin-md;
@@ -9459,9 +9460,11 @@ footer.page-footer {
 .cursor-pointer {
   cursor: pointer;
 }
+
 .chat-app-tab-pane-contacts {
   height: calc(100vh - 220px);
 }
+
 .chat-app-tab-pane-messages {
   height: calc(100vh - 170px);
 }
@@ -9491,6 +9494,7 @@ footer.page-footer {
   }
 
   #app-container {
+
     &.sub-hidden .footer-content,
     &.menu-sub-hidden .footer-content,
     &.menu-hidden .footer-content {
@@ -9509,6 +9513,7 @@ footer.page-footer {
         margin-right: $main-margin + $sub-menu-width;
         margin-left: $main-margin;
       }
+
       &.menu-hidden {
         .footer-content {
           margin-right: $main-margin;
@@ -9518,6 +9523,7 @@ footer.page-footer {
     }
 
     @include respond-below(xl) {
+
       &.sub-hidden .footer-content,
       &.menu-sub-hidden .footer-content,
       &.menu-hidden .footer-content {
@@ -9536,6 +9542,7 @@ footer.page-footer {
           margin-right: $main-margin-lg + $sub-menu-width-lg;
           margin-left: $main-margin-lg;
         }
+
         &.menu-hidden {
           .footer-content {
             margin-right: $main-margin-lg;
@@ -9546,6 +9553,7 @@ footer.page-footer {
     }
 
     @include respond-below(lg) {
+
       &.sub-hidden .footer-content,
       &.menu-sub-hidden .footer-content,
       &.menu-hidden .footer-content {
@@ -9564,6 +9572,7 @@ footer.page-footer {
           margin-right: $main-margin-md + $sub-menu-width-md;
           margin-left: $main-margin-md;
         }
+
         &.menu-hidden {
           .footer-content {
             margin-right: $main-margin-md;
@@ -9578,6 +9587,7 @@ footer.page-footer {
     footer.page-footer {
       padding-left: $app-menu-width;
       padding-right: initial;
+
       @include respond-below(lg) {
         padding-left: 0;
       }

@@ -9,10 +9,10 @@ const routes: Routes = [
         children: [
             // { path: '', pathMatch: 'full', redirectTo: 'vien' },
             // { path: 'vien', loadChildren: () => import('./vien/vien.module').then(m => m.VienModule) },
-            { path: '', pathMatch: 'full', redirectTo: 'pages' },
-            { path: 'pages', loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule) },
-            { path: 'second-menu', loadChildren: () => import('./second-menu/second-menu.module').then(m => m.SecondMenuModule) },
-            { path: 'blank-page', component: BlankPageComponent },
+            // { path: '', pathMatch: 'full', redirectTo: 'pages' },
+            // { path: 'pages', loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule) },
+            // { path: 'second-menu', loadChildren: () => import('./second-menu/second-menu.module').then(m => m.SecondMenuModule) },
+            // { path: 'blank-page', component: BlankPageComponent },
         ]
     }
 ];

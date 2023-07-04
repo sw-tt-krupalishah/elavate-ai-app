@@ -29,6 +29,7 @@
             ],
             "extractCss": true,
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/assets/css/vendor/bootstrap.min.css",
               "src/assets/css/vendor/bootstrap.rtl.only.min.css",
               "./node_modules/@glidejs/glide/dist/css/glide.core.min.css",
@@ -142,7 +143,9 @@
                 "inject": false
               }
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ]
           },
           "configurations": {
             "production": {

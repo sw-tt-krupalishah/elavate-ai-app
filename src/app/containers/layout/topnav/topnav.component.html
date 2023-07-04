@@ -1,187 +1,295 @@
-<nav class="navbar fixed-top">
-  <div class="d-flex align-items-center navbar-left">
-    <a (click)="menuButtonClick($event, sidebar.menuClickCount, sidebar.containerClassnames); false;" href="javascript:;"  class="menu-button d-none d-md-block">
-      <svg class="main" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 17">
-        <rect x="0.48" y="0.5" width="7" height="1" />
-        <rect x="0.48" y="7.5" width="7" height="1" />
-        <rect x="0.48" y="15.5" width="7" height="1" />
-      </svg> {{" "}}
-      <svg class="sub" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 17">
-        <rect x="1.56" y="0.5" width="16" height="1" />
-        <rect x="1.56" y="7.5" width="16" height="1" />
-        <rect x="1.56" y="15.5" width="16" height="1" />
-      </svg>
-    </a>
+<nav class="navbar navbar-expand-lg navbar-light bg-white d-flex justify-content-center">
+  <a href="#" class="navbar-brand text-center">
+    <img src="../../../../assets/img/hack-img/logo new.png" width="28%" /></a>
+</nav>
 
-    <a (click)="mobileMenuButtonClick($event, sidebar.containerClassnames)" href="javascript:;" class="menu-button-mobile d-xs-block d-sm-block d-md-none">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 17">
-        <rect x="0.5" y="0.5" width="25" height="1" />
-        <rect x="0.5" y="7.5" width="25" height="1" />
-        <rect x="0.5" y="15.5" width="25" height="1" />
-      </svg>
-    </a>
+<div class="container">
+  <div class="row section1 mt-4">
+    <div class="col-md-3 col-12 mb-3">
+      <div class="card" [ngClass]="selectedUser == 'Bussiness User' ? 'card-selected' : ''">
+        <div class="card-body">
+          <a (click)="changePersona('Bussiness User')">
+            <div class="text-center card-main-dash">
+              <img src="../../../../assets/img/hack-img/business-man.svg" width="20%" />
 
-    <!-- <div class="search" (click)="searchAreaClick($event)">
-      <input placeholder="Search..." [(ngModel)]="searchKey" (keyup)="searchKeyUp($event)">
-      <span class="search-icon" (click)="searchClick($event)">
-        <i class="simple-icon-magnifier"></i>
-      </span>
-    </div> -->
-
-    <!-- <div class="btn-group ml-2" dropdown *ngIf="!isSingleLang">
-      <button dropdownToggle type="button" class="language-button dropdown-toggle btn btn-light btn-sm">
-        {{currentLanguage | uppercase}} <span class="caret"></span>
-      </button>
-      <ul *dropdownMenu class="dropdown-menu" role="menu">
-        <li role="menuitem" *ngFor="let item of languages" (click)="onLanguageChange(item)"><a class="dropdown-item" href="javascript:;">{{item.label}}</a></li>
-      </ul>
-    </div> -->
-
-    <!-- <a class="btn btn-sm btn-outline-primary ml-2 d-none d-xl-inline-block" href="javascript:;">&nbsp;BUY&nbsp;</a> -->
-  </div>
-
-
-  <a class="navbar-logo" href="/">
-    <span class=" d-none d-xs-block"><b>ElavateAI</b></span>
-    <span class=" d-block d-xs-none"><b>ElavateAI</b></span>
-  </a>
-
-  <div class="navbar-right">
-    <div class="header-icons d-inline-block align-middle">
-
-      <div class="d-none d-md-inline-block align-text-bottom mr-1">
-        <div class="custom-control custom-switch" tooltip="Dark Mode" placement="left">
-          <input type="checkbox" class="custom-control-input" id="darkModeSwitch" [checked]="isDarkModeActive" (change)="onDarkModeChange($event)">
-          <label class="custom-control-label" for="darkModeSwitch"></label>
+              <h3 class="text-success mt-3">Bussiness User</h3>
+            </div>
+          </a>
         </div>
       </div>
-
-      <!-- <div class="position-relative d-none d-sm-inline-block">
-        <div dropdown>
-          <button  dropdownToggle type="button" class="header-icon btn btn-empty">
-            <i class="simple-icon-grid"></i>
-          </button>
-          <div *dropdownMenu class="dropdown-menu dropdown-menu-right mt-3" role="menu" aria-labelledby="button-basic" id="iconMenuDropdown">
-            <a href="javascript:;" class="icon-menu-item">
-              <i class="iconsminds-equalizer d-block"></i>
-              <span>Settings</span>
-            </a>
-
-            <a href="javascript:;" class="icon-menu-item">
-              <i class="iconsminds-male-female d-block"></i>
-              <span>Users</span>
-            </a>
-
-            <a href="javascript:;" class="icon-menu-item">
-              <i class="iconsminds-puzzle d-block"></i>
-              <span>Components</span>
-            </a>
-
-            <a href="javascript:;" class="icon-menu-item">
-              <i class="iconsminds-bar-chart-4 d-block"></i>
-              <span>Profits</span>
-            </a>
-
-            <a href="javascript:;" class="icon-menu-item">
-              <i class="iconsminds-file d-block"></i>
-              <span>Surveys</span>
-            </a>
-
-            <a href="javascript:;" class="icon-menu-item">
-              <i class="iconsminds-suitcase d-block"></i>
-              <span>Tasks</span>
-            </a>
-          </div>
-        </div>
-      </div> -->
-
-      <!-- <div class="position-relative d-inline-block">
-
-        <div dropdown>
-          <button id="button-basic" dropdownToggle type="button" id="notificationButton" class="header-icon btn btn-empty">
-            <i class="simple-icon-bell"></i>
-            <span class="count">3</span>
-          </button>
-          <div id="dropdown-basic" *dropdownMenu class="dropdown-menu dropdown-menu-right mt-3" id="notificationDropdown">
-            <perfect-scrollbar>
-              <div class="d-flex flex-row mb-3 pb-3 border-bottom">
-                <a href="javascript:;">
-                  <img src="/assets/img/profile-pic-l-2.jpg" alt="Notification Image"
-                    class="img-thumbnail list-thumbnail xsmall border-0 rounded-circle" />
-                </a>
-                <div class="pl-3">
-                  <a href="javascript:;">
-                    <p class="font-weight-medium mb-1">Joisse Kaycee just sent a new comment!</p>
-                    <p class="text-muted mb-0 text-small">09.04.2018 - 12:45</p>
-                  </a>
-                </div>
-              </div>
-              <div class="d-flex flex-row mb-3 pb-3 border-bottom">
-                <a href="javascript:;">
-                  <img src="/assets/img/notification-thumb.jpg" alt="Notification Image"
-                    class="img-thumbnail list-thumbnail xsmall border-0 rounded-circle" />
-                </a>
-                <div class="pl-3">
-                  <a href="javascript:;">
-                    <p class="font-weight-medium mb-1">1 item is out of stock!</p>
-                    <p class="text-muted mb-0 text-small">09.04.2018 - 12:45</p>
-                  </a>
-                </div>
-              </div>
-              <div class="d-flex flex-row mb-3 pb-3 border-bottom">
-                <a href="javascript:;">
-                  <img src="/assets/img/notification-thumb-2.jpg" alt="Notification Image"
-                    class="img-thumbnail list-thumbnail xsmall border-0 rounded-circle" />
-                </a>
-                <div class="pl-3">
-                  <a href="javascript:;">
-                    <p class="font-weight-medium mb-1">New order received! It is total $147,20.</p>
-                    <p class="text-muted mb-0 text-small">09.04.2018 - 12:45</p>
-                  </a>
-                </div>
-              </div>
-              <div class="d-flex flex-row mb-3 pb-3 ">
-                <a href="javascript:;">
-                  <img src="/assets/img/notification-thumb-3.jpg" alt="Notification Image"
-                    class="img-thumbnail list-thumbnail xsmall border-0 rounded-circle" />
-                </a>
-                <div class="pl-3">
-                  <a href="javascript:;">
-                    <p class="font-weight-medium mb-1">3 items just added to wish list by a user!
-                    </p>
-                    <p class="text-muted mb-0 text-small">09.04.2018 - 12:45</p>
-                  </a>
-                </div>
-              </div>
-            </perfect-scrollbar>
-          </div>
-        </div>
-      </div> -->
-
-      <!-- <button class="header-icon btn btn-empty d-none d-sm-inline-block" type="button" id="fullScreenButton" (click)="fullScreenClick()">
-        <i *ngIf="!isFullScreen" class="simple-icon-size-fullscreen"></i>
-        <i *ngIf="isFullScreen" class="simple-icon-size-actual"></i>
-      </button> -->
-
     </div>
 
-    <!-- <div class="user d-inline-block" dropdown>
-      <button class="btn btn-empty p-0" type="button" dropdownToggle>
-        <span class="name">{{displayName}}</span>
-        <span>
-          <img alt="Profile Picture" src="/assets/img/profile-pic-l.jpg" />
-        </span>
-      </button>
+    <div class="col-md-3 col-12 mb-3">
+      <div class="card" [ngClass]="selectedUser == 'Developer' ? 'card-selected' : ''">
+        <div class="card-body">
+          <a (click)="changePersona('Developer')">
+            <div class="text-center card-main-dash">
+              <img src="../../../../assets/img/hack-img/coding.png" width="20%" />
 
-      <div class="dropdown-menu dropdown-menu-right mt-3" *dropdownMenu role="menu">
-        <a class="dropdown-item c-pointer">Account</a>
-        <a class="dropdown-item c-pointer">Features</a>
-        <a class="dropdown-item c-pointer">History</a>
-        <a class="dropdown-item c-pointer">Support</a>
-        <li class="divider dropdown-divider"></li>
-        <a class="dropdown-item c-pointer" (click)="onSignOut()">Sign out</a>
+              <h3 class="text-success mt-3">Developer</h3>
+            </div>
+          </a>
+        </div>
       </div>
-    </div> -->
+    </div>
 
+    <div class="col-md-3 col-12 mb-3">
+      <div class="card" [ngClass]="selectedUser == 'Tester User' ? 'card-selected' : ''">
+        <div class="card-body">
+          <a (click)="changePersona('Tester User')">
+            <div class="text-center card-main-dash">
+              <img src="../../../../assets/img/hack-img/tester.png" width="20%" />
+
+              <h3 class="text-success mt-3">Tester User</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 col-12 mb-3">
+      <div class="card" [ngClass]="selectedUser == 'Other' ? 'card-selected' : ''">
+        <div class="card-body">
+          <a (click)="changePersona('Other')">
+            <div class="text-center card-main-dash">
+              <img src="../../../../assets/img/hack-img/business-team.svg" width="20%" />
+
+              <h3 class="text-success mt-3">Other</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
-</nav>
+
+  <div class="row">
+    <div class="col-12">
+      <div class="container">
+        <div class="row justify-content-center my-5">
+          <div class="col-12">
+            <ul class="nav mb-5 justify-content-center">
+              <li class="nav-item">
+                <a class="nav-link link-secondary active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
+                  href="#">Create App</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link link-secondary" id="about-tab" data-bs-toggle="tab" data-bs-target="#about"
+                  href="#">API Createtion</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link link-secondary" id="album-tab" data-bs-toggle="tab" data-bs-target="#album"
+                  href="#">Chat With API</a>
+              </li>
+              <li class="nav-item" *ngIf="isDev">
+                <a class="nav-link link-secondary" id="album-tab" data-bs-toggle="tab" data-bs-target="#github"
+                  href="#">Chat With GitHub</a>
+              </li>
+            </ul>
+
+            <div class="tab-content" id="tabContent">
+              <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row section2">
+                      <div class="text-center">
+                        <h3 class="text-start">Select Industry</h3>
+
+                        <div class="row">
+                          <div class="col-lg-2 col-md-3 col-6"  (click)="industryTypeChange('Supply chain')">
+                            <div class="card rounded-circle p-5" [ngClass]="selectedInd == 1 ? 'card-selected' : ''">
+                              <img src="../../../../assets/img/hack-img/img/supply-chain.svg" />
+                            </div>
+
+                            <h5 class="mt-3">Supply Chain</h5>
+                          </div>
+                          <div class="col-lg-2 col-md-3 col-6" (click)="industryTypeChange('HealthTech')">
+                            <div class="card rounded-circle p-5" [ngClass]="selectedInd == 2 ? 'card-selected' : ''">
+                              <img src="../../../../assets/img/hack-img/img/healthcare.svg" />
+                            </div>
+
+                            <h5 class="mt-3">Health Tech</h5>
+                          </div>
+
+                          <div class="col-lg-2 col-md-3 col-6" (click)="
+                              industryTypeChange(
+                                'Artificial Intelligence(AI) and Machine Learning(ML)'
+                              )
+                            ">
+                            <div class="card rounded-circle p-5" [ngClass]="selectedInd == 3 ? 'card-selected' : ''">
+                              <img src="../../../../assets/img/hack-img/img/Ai-logo.svg" />
+                            </div>
+
+                            <h5 class="mt-3">AI Tech</h5>
+                          </div>
+
+                          <div class="col-lg-2 col-md-3 col-6" (click)="industryTypeChange('EdTech')">
+                            <div class="card rounded-circle p-5" [ngClass]="selectedInd == 4 ? 'card-selected' : ''">
+                              <img src="../../../../assets/img/hack-img/img/edge.svg" />
+                            </div>
+
+                            <h5 class="mt-3">ED Tech</h5>
+                          </div>
+
+                          <div class="col-lg-2 col-md-3 col-6" (click)="industryTypeChange('Cybersecurity')">
+                            <div class="card rounded-circle p-5" [ngClass]="selectedInd == 5 ? 'card-selected' : ''">
+                              <img src="../../../../assets/img/hack-img/img/cyber-security.svg" />
+                            </div>
+
+                            <h5 class="mt-3">Cyber Security</h5>
+                          </div>
+
+                          <div class="col-lg-2 col-md-3 col-6" (click)="industryTypeChange('Renewable Energy')">
+                            <div class="card rounded-circle p-5" [ngClass]="selectedInd == 6 ? 'card-selected' : ''">
+                              <img src="../../../../assets/img/hack-img/img/renewable-energy.svg" />
+                            </div>
+
+                            <h5 class="mt-3">Renewable Energy</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <app-feature-list [industrytype]="industry" [IndustryTitle]="IndustryTitle"
+                      [IndustryDescription]="IndustryDescription"></app-feature-list>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="about" role="tabpanel" aria-labelledby="about-tab">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-center">
+                      <div class="mt-4">
+                        <input type="file" id="fileLoader" name="files" title="Load File" />
+                        <input type="button" id="btnOpenFileDialog" value="Upload File" (click)="openfileDialog()" />
+                      </div>
+                    </div>
+
+                    <div class="row justify-content-center mt-4">
+                      <div class="col-8">
+                        <div class="border1">
+                        <textarea class="form-control" rows="25">
+
+                        </textarea>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row justify-content-center mt-4">
+                      <div class="col-2 text-center">
+                        <button class="btn btn-info px-5">Save</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="album" role="tabpanel" aria-labelledby="album-tab">
+                <div class="card">
+                  <div class="card-body">
+                  
+                    <div class="row justify-content-center">
+                    
+                        <div class="col-8 mb-2">
+                    
+                            <label class="mb-2 fw-bold"> Enter Public Opensource API Documentation URL</label>
+                    
+                            <input type="text" class="form-control">
+                    
+                        </div>
+                        <div class="row justify-content-center mt-4">
+                          <div class="col-2 text-center ">
+                            <button class="btn btn-info px-5">Save</button>
+                          </div>
+                        </div>
+                        <div class="col-8 mb-2 mt-4">
+                    
+                            <label class="mb-2 fw-bold"> list of questions to ask in this github</label>
+                    
+                            <input type="text" class="form-control">
+                    
+                        </div>
+                        <div class="row justify-content-center mt-4">
+                          <div class="col-2 text-center ">
+                            <button class="btn btn-info px-5">getAnswers</button>
+                          </div>
+                        </div>
+                        <!-- <div class="col-8 mb-2">
+                    
+                            <label class="mb-2 fw-bold"> how do you want to target ? </label>
+                    
+                          
+                    
+                            <div class="">
+                    
+                                <div class="col-12 ps-0">
+                    
+                                    <div class="form-check">
+                    
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    
+                                        <label class="form-check-label" for="flexCheckDefault">
+                    
+                                            social media asset
+                    
+                                        </label>
+                    
+                                      </div>
+                    
+                                </div>
+                    
+                            </div>
+                    
+                        </div> -->
+                    
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="github" role="tabpanel" aria-labelledby="album-tab">
+                <div class="card">
+                  <div class="card-body">
+                  
+                    <div class="row justify-content-center">
+                    
+                        <div class="col-8 mb-2">
+                    
+                            <label class="mb-2 fw-bold"> Enter Public Opensource API Documentation URL</label>
+                    
+                            <input type="text" class="form-control">
+                    
+                        </div>
+                        <div class="row justify-content-center mt-4">
+                          <div class="col-2 text-center ">
+                            <button class="btn btn-info px-5">Save</button>
+                          </div>
+                        </div>
+                        <div class="col-8 mb-2 mt-4">
+                    
+                            <label class="mb-2 fw-bold"> List Of Queries</label>
+                    
+                            <input type="text" class="form-control">
+                    
+                        </div>
+                        <div class="row justify-content-center mt-4">
+                          <div class="col-2 text-center ">
+                            <button class="btn btn-info px-5">getAnswers</button>
+                          </div>
+                        </div>
+                       
+                    
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

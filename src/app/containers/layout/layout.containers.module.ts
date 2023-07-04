@@ -12,6 +12,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HeadingComponent } from './heading/heading.component';
 import { ApplicationMenuComponent } from './application-menu/application-menu.component';
 import { FormsModule } from '@angular/forms';
+import { PagesModule } from 'src/app/views/app/pages/pages.module';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { FormsModule } from '@angular/forms';
     RouterModule,
     CollapseModule,
     FormsModule,
+    PagesModule,
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),
   ],

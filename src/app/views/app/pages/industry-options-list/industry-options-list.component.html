@@ -1,4 +1,4 @@
-<div class="row">
+<!-- <div class="row">
     <div class="col-12 list">
         <div class="row">
           <div class="col-xl-3 col-lg-4 col-12 col-sm-6 mb-4" *ngFor="let p of data; let i=index">
@@ -8,8 +8,9 @@
               </div>
               <div class="card-body">
                   <div class="row">
-                  <div class="col-10">
-                    <a href="javascript:;">
+                  <div class="col-12">
+                    <a href="javascript:;" class="text-center">
+                      <h4 class="text-avnet-success mb-0 pt-1 fw-bold">{{p.title}}</h4> 
                       <p class="list-item-heading mb-4 pt-1">{{p.title}}</p>
                     </a>
                   </div>
@@ -19,4 +20,70 @@
           </div>
         </div>
       </div>
+</div> -->
+
+
+
+
+--------------------------------------------------------
+<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+  <div class="card">
+    <div class="card-body">
+      <div class="row section2">
+        <div class="text-center">
+          <h3 class="text-start">Select Industry</h3>
+
+          <div class="row">
+            <div class="col-md-2 col-12" *ngFor="let p of data; let i=index">
+              <div class="card rounded-circle p-5" (click)="onIndustrySelect(p)">
+                <img src="../../../../assets/img/hack-img/supply-chain.svg" />
+              </div>
+            <h5 class="mt-3">Supply Chain</h5>
+            </div>
+            <!-- <div class="col-md-2 col-12" >
+              <div class="card rounded-circle p-5">
+                <img src="../../../../assets/img/hack-img/healthcare.svg" />
+              </div>
+
+              <h5 class="mt-3">Health tech</h5>
+            </div> -->
+
+            <!-- <div class="col-md-2 col-12">
+              <div class="card rounded-circle p-5">
+                <img src="../../../../assets/img/hack-img/ai-knowledge.svg" />
+              </div>
+
+              <h5 class="mt-3">Ai tech</h5>
+            </div>
+
+            <div class="col-md-2 col-12">
+              <div class="card rounded-circle p-5">
+                <img src="../../../../assets/img/hack-img/edge.svg" />
+              </div>
+
+              <h5 class="mt-3">ED tech</h5>
+            </div>
+
+            <div class="col-md-2 col-12">
+              <div class="card rounded-circle p-5">
+                <img src="../../../../assets/img/hack-img/cyber-security.svg" />
+              </div>
+
+              <h5 class="mt-3">Cyber Security</h5>
+            </div>
+
+            <div class="col-md-2 col-12">
+              <div class="card rounded-circle p-5">
+                <img src="../../../../assets/img/hack-img/renewable-energy.svg" />
+              </div>
+
+              <h5 class="mt-3">Renewable Energy</h5>
+            </div> -->
+          </div>
+        </div>
+      </div>
+
+      <app-feature-list></app-feature-list>
+    </div>
+  </div>
 </div>

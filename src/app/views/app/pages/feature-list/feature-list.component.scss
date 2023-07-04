@@ -1,107 +1,94 @@
+.features ul li {
+    width: 50%;
+}
+
+.container1 {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.container1 input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #fff;
+    border: 1px solid #41c363;
+}
+
+.container1 input:checked~.checkmark {
+    background-color: #41c363;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
 
 
-        .container1 {
+.container1 input:checked~.checkmark:after {
+    display: block;
+}
 
-            display: block;
+.container1 .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px; 
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
 
-            position: relative;
+ul li {
+    padding: 4px 15px 4px 0;
+}
 
-            padding-left: 35px;
+ul {
+    display: flex; 
+    justify-content: space-between;
+}
 
-            margin-bottom: 12px;
+.text-avnet-success {
+    color: #41c363;
+}
 
-            cursor: pointer;
+.fw-bold {
+    font-weight: 700;
+}
 
-            font-size: 22px;
+.fw-bolder {
+    font-weight: 900;
+}
+button{
+    background: #4caf50 !important;
+ }
+@media(max-width:551px) {
+    .features ul li {
+        width: 100%;
+    }
 
-            -webkit-user-select: none;
-
-            -moz-user-select: none;
-
-            -ms-user-select: none;
-
-            user-select: none;
-
-        }
-
-
-        .container1 input {
-
-            position: absolute;
-
-            opacity: 0;
-
-            cursor: pointer;
-
-            height: 0;
-
-            width: 0;
-
-        }
-
-
-        .checkmark {
-
-            position: absolute;
-
-            top: 0;
-
-            left: 0;
-
-            height: 25px;
-
-            width: 25px;
-
-            background-color: #fff;
-
-            border: 1px solid #2196f3;
-
-        }
-
-
-        .container1 input:checked~.checkmark {
-
-            background-color: #2196F3;
-
-        }
-
-
-        .checkmark:after {
-
-            content: "";
-
-            position: absolute;
-
-            display: none;
-
-        }
-
-
-        .container1 input:checked~.checkmark:after {
-
-            display: block;
-
-        }
-
-
-        .container1 .checkmark:after {
-
-            left: 9px;
-
-            top: 5px;
-
-            width: 5px;
-
-            height: 10px;
-
-            border: solid white;
-
-            border-width: 0 3px 3px 0;
-
-            -webkit-transform: rotate(45deg);
-
-            -ms-transform: rotate(45deg);
-
-            transform: rotate(45deg);
-
-        }
+    ul {
+        display: block;
+    }
+}

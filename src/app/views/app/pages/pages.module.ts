@@ -14,6 +14,10 @@ import { FeatureListComponent } from './feature-list/feature-list.component';
   imports: [
     CommonModule,
     PagesRoutingModule
+  ],
+  exports: [
+    FeatureListComponent,
+    IndustryOptionsListComponent
   ]
 })
 export class PagesModule { }

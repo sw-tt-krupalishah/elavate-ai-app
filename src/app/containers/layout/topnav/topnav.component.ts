@@ -5,10 +5,12 @@ import { Router } from '@angular/router';
 import { LangService, Language } from 'src/app/shared/lang.service';
 import { AuthService } from 'src/app/shared/auth.service';
 import { environment } from 'src/environments/environment';
+import { TopnavService } from './topnav.service';
 
 @Component({
   selector: 'app-topnav',
-  templateUrl: './topnav.component.html'
+  templateUrl: './topnav.component.html',
+  styleUrls: ["./topnav.component.scss"],
 })
 export class TopnavComponent implements OnInit, OnDestroy {
   sidebar: ISidebar;
@@ -20,14 +22,63 @@ export class TopnavComponent implements OnInit, OnDestroy {
   isFullScreen = false;
   isDarkModeActive = false;
   searchKey = '';
-
-  constructor(private sidebarService: SidebarService, private authService: AuthService, private router: Router, private langService: LangService) {
+  isDev = false;
+  industry = 'Supply chain';
+  IndustryTitle = 'Supply chain';
+  IndustryDescription = 'With the rise of online shopping, e-commerce platforms require sophisticated software systems for inventory management, order processing, payment gateways, customer relationship management (CRM), and personalized shopping experiences.';
+  selectedUser = "Bussiness User";
+  selectedInd: number = 1;
+  constructor(private sidebarService: SidebarService,private topnavService : TopnavService ,private authService: AuthService, private router: Router, private langService: LangService) {
     this.languages = this.langService.supportedLanguages;
     this.currentLanguage = this.langService.languageShorthand;
     this.isSingleLang = this.langService.isSingleLang;
     this.isDarkModeActive = this.getColor().indexOf('dark') > -1 ? true : false;
   }
-
+  industryTypeChange(industryType){
+    
+    console.log(industryType);
+    this.industry = industryType;
+    if(industryType == "Supply chain"){
+      this.selectedInd = 1;
+      this.IndustryTitle = "Supply chain";
+      this.IndustryDescription = "With the rise of online shopping, e-commerce platforms require sophisticated software systems for inventory management, order processing, payment gateways, customer relationship management (CRM), and personalized shopping experiences."
+    }
+    if(industryType == "HealthTech"){
+      this.selectedInd = 2;
+      this.IndustryTitle = "HealthTech";
+      this.IndustryDescription = "Software development plays a crucial role in the healthcare industry, powering electronic health records (EHRs), telemedicine platforms, medical imaging software, health monitoring devices, and other digital health solutions."
+    }
+    if(industryType == "Artificial Intelligence(AI) and Machine Learning(ML)"){
+      this.selectedInd = 3;
+      this.IndustryTitle = "Artificial Intelligence(AI) and Machine Learning(ML)";
+      this.IndustryDescription = "AI and ML technologies are being integrated into various industries, including healthcare, finance, transportation, and marketing, creating a high demand for software development in these areas."
+    }
+    if(industryType == "EdTech"){
+      this.selectedInd = 4;
+      this.IndustryTitle = "EdTech";
+      this.IndustryDescription = "The education industry is embracing technology to enhance learning experiences. Educational software is being developed for online learning platforms, learning management systems (LMS), virtual reality (VR) and augmented reality (AR) applications, and personalized adaptive learning."
+    }
+    if(industryType == "Cybersecurity"){
+      this.selectedInd = 5;
+      this.IndustryTitle = "Cybersecurity";
+      this.IndustryDescription = "As cyber threats continue to grow in sophistication, cybersecurity software development is in high demand. Companies and organizations need robust solutions for data protection, network security, threat detection, and encryption."
+    }
+    if(industryType == "Renewable Energy"){
+      this.selectedInd = 6;
+      this.IndustryTitle = "Renewable Energy";
+      this.IndustryDescription = "The renewable energy sector is expanding rapidly, and software is needed for energy management, smart grids, energy storage, and optimization algorithms to improve efficiency and sustainability"
+    }
+  }
+  openfileDialog(){
+    document.getElementById('fileLoader').click();
+  }
+  onIndustrySelect(industry) {
+    if (industry) {
+      this.router.navigate(["/app/pages/feature"], {
+        queryParams: { key: industry.title},
+      });
+    }
+  }
   onDarkModeChange(event) {
     let color = this.getColor();
     if (color.indexOf('dark') > -1) {
@@ -40,7 +91,9 @@ export class TopnavComponent implements OnInit, OnDestroy {
       window.location.reload();
     }, 200);
   }
-
+  getGitHubURL(){
+    this.topnavService.getGitURL({"getGitURL" : "" }).subscribe(data => {});
+  }
   getColor() {
     return localStorage.getItem(environment.themeColorStorageKey)
       ? localStorage.getItem(environment.themeColorStorageKey)
@@ -143,7 +196,10 @@ export class TopnavComponent implements OnInit, OnDestroy {
     }
     event.stopPropagation();
   }
-
+  changePersona(user){
+    this.selectedUser = user;
+    this.isDev = user == 'Developer' ? true : false;
+  }
   search() {
     if (this.searchKey && this.searchKey.length > 1) {
       this.router.navigate(['/app/pages/miscellaneous/search'], { queryParams: { key: this.searchKey.toLowerCase().trim() } });
