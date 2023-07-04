@@ -35,8 +35,6 @@ export class TopnavComponent implements OnInit, OnDestroy {
     this.isDarkModeActive = this.getColor().indexOf('dark') > -1 ? true : false;
   }
   industryTypeChange(industryType){
-    
-    console.log(industryType);
     this.industry = industryType;
     if(industryType == "Supply chain"){
       this.selectedInd = 1;
@@ -91,8 +89,17 @@ export class TopnavComponent implements OnInit, OnDestroy {
       window.location.reload();
     }, 200);
   }
+  getDocURL(){
+    this.topnavService.getDocURL({"DocUrl" : "https://open-meteo.com/en/docs" }).subscribe(data => {});
+  }
+  getDocAnswers(){
+    this.topnavService.getDocAnswer({"DocQue" : ["Weather of Bodakdev Ahmedabad today ?"]}).subscribe(data => {});
+  }
   getGitHubURL(){
-    this.topnavService.getGitURL({"getGitURL" : "" }).subscribe(data => {});
+    this.topnavService.getGitURL({"GitURL" : "https://github.com/TencentYoutuResearch/CrowdCounting-P2PNet.git" }).subscribe(data => {});
+  }
+  getAnswers(){
+    this.topnavService.getAnswer({"GitQuestion" : ["Is there any preprocessing functions available for images? ","How we can use this code for commercial purposes?"] }).subscribe(data => {});
   }
   getColor() {
     return localStorage.getItem(environment.themeColorStorageKey)

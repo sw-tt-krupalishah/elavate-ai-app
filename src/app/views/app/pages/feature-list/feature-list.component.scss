@@ -43,7 +43,6 @@
     display: none;
 }
 
-
 .container1 input:checked~.checkmark:after {
     display: block;
 }
@@ -52,7 +51,7 @@
     left: 9px;
     top: 5px;
     width: 5px;
-    height: 10px; 
+    height: 10px;
     border: solid white;
     border-width: 0 3px 3px 0;
     -webkit-transform: rotate(45deg);
@@ -65,7 +64,7 @@ ul li {
 }
 
 ul {
-    display: flex; 
+    display: flex;
     justify-content: space-between;
 }
 
@@ -80,10 +79,12 @@ ul {
 .fw-bolder {
     font-weight: 900;
 }
-button{
+
+button {
     background: #4caf50 !important;
- }
-@media(max-width:551px) {
+}
+
+@media (max-width: 551px) {
     .features ul li {
         width: 100%;
     }
