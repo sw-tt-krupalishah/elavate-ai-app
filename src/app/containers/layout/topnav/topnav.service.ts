@@ -20,4 +20,5 @@ export class TopnavService {
   getDocAnswer(DocQue){
     return this.http.post(`https://abf9-111-93-95-94.in.ngrok.io//api/get_doc_que_ans`,DocQue).pipe(map(rsp => rsp));
   }
+  getFile(){}
 }

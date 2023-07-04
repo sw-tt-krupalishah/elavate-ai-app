@@ -101,6 +101,9 @@ export class TopnavComponent implements OnInit, OnDestroy {
   getAnswers(){
     this.topnavService.getAnswer({"GitQuestion" : ["Is there any preprocessing functions available for images? ","How we can use this code for commercial purposes?"] }).subscribe(data => {});
   }
+  saveFile(){
+    this.topnavService.getFile({});
+  }
   getColor() {
     return localStorage.getItem(environment.themeColorStorageKey)
       ? localStorage.getItem(environment.themeColorStorageKey)
