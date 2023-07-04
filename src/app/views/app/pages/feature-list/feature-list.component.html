@@ -1,0 +1,59 @@
+<!-- <div class="row">
+    <div class="col-12">
+        <div class="card mb-4">
+            <div class="card-body">
+                <h1>{{ industryType }}</h1>
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">{{ "forms.email" }}</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="{{ 'forms.email' }}" />
+                        <small id="emailHelp" class="form-text text-muted">{{ "forms.email-muted" }}</small>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+            <div class="p-md-5 p-0 text-center">
+                <h1 class="mb-5 text-avnet-success fw-bolder">{{IndustryTitle}}</h1>
+                <div class="row justify-content-center">
+                    <div class="col-md-8 col-12">
+                        <p class="mb-5 px-4">
+                            {{IndustryDescription}}
+                        </p>
+                    </div>
+                </div>
+
+                <h4 class="text-dark fw-bold mb-5">
+                    Select/ Deselect the features amd modules
+                </h4> 
+                <div class="border-bottom"></div>
+                <div class="row mt-4">
+                    <div class="col-md-12 col-12 text-left" *ngFor="let supply of moduleList;let i = index">
+                        <label class="d-md-flex d-block container1">
+                        <h3 class="mb-3 text-avnet-success">{{supply.module}}</h3> 
+                        <input type="checkbox" class="ms-3" value="{{supply}}" (change)="onChange($event.target.checked, supply)"/>
+                        <span class="checkmark"></span>
+                    </label>
+                        <ul style="list-style: none;">
+                            <li class="" *ngFor="let inventory of supply.feature">
+                                <label class="d-md-flex d-block container1">
+                                    <h4>{{inventory}}</h4>
+                                    <input type="checkbox" class="ms-3"  [disabled]="disableFeature" (change)="onChangeFeature($event.target.checked, inventory,supply)"/>
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+               
+                <div class="row justify-content-center mt-4">
+                    <div class="col-2 text-center">
+                      <button class="btn btn-info px-5" (click)="createAppClicked()">Create</button>
+                    </div>
+                  </div> 
+            </div>

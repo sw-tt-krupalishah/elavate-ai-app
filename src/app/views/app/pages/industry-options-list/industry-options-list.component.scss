@@ -1,0 +1,102 @@
+.card {
+    height: 23em;
+}
+
+.card-body {
+    padding: 18px;
+}
+
+.card-body h4 {
+
+    text-transform: capitalize;
+}
+
+.text-avnet-success {
+    color: #41c363;
+}
+
+.fw-bold {
+    font-weight: 700;
+}
+
+.fw-bolder {
+    font-weight: 900;
+}
+
+.card-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img.card-img-top {
+    height: 196px;
+}
+.card-main-dash {
+    //  display: flex !important;
+    flex-direction: column !important;
+ }
+ 
+ ul li {
+    background: #ddd;
+    // padding: 0 60px;
+    margin: 0 30px;
+    border-radius: 33px;
+    position: relative;
+ }
+ .nav-link {
+    padding: 0.5rem 5rem;
+ }
+ .nav-link.active {
+    background: #41c363 !important;
+    border-radius: 33px;
+    color: #fff !important;
+ }
+ 
+ li::before {
+    content: "";
+    position: absolute;
+    width: 65px;
+    top: 20px;
+    left: 100%;
+    border: 2px solid #41c363;
+ }
+ 
+ li:last-child:before {
+    display: none;
+ }
+ 
+ .section1 .card {
+ 
+    box-shadow: 8px 4px 0 0 #ddd;
+ 
+ }
+ 
+ .section2 .card {
+ 
+    border: none;
+ 
+    box-shadow: 0 2px 20px #ddd;
+ 
+ }
+ 
+ .section3 .card {
+    width: 50%;
+ }
+ #fileLoader
+ {
+     display:none;
+ }
+ 
+ #btnOpenFileDialog{
+    background-color: #4CAF50; 
+     border: none;
+     color: white;
+     padding: 15px 32px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 16px;
+ }
+ .border1 {
+    border: 1px solid #4caf50 !important;
+ }

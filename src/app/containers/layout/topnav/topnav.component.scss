@@ -1,0 +1,88 @@
+.card-main-dash {
+   //  display: flex !important;
+   flex-direction: column !important;
+}
+a{
+   cursor: pointer;
+}
+.card-selected{
+   background: whitesmoke;
+}
+ul li {
+   background: #ddd;
+   // padding: 0 60px;
+   margin: 6px 18px;
+   border-radius: 33px;
+   position: relative;
+}
+.nav-link {
+   padding: 0.5rem 5rem;
+}
+.nav-link.active {
+   background: #41c363 !important;
+   border-radius: 33px;
+   color: #fff !important;
+}
+button{
+   background: #4caf50 !important;
+}
+li::before {
+   content: "";
+   position: absolute;
+   width: 65px;
+   top: 20px;
+   left: 100%;
+   border: 2px solid #41c363;
+}
+.border-black{ 
+   padding: 3px 10px;
+   border-radius: 31px;
+   border: 1px solid #333;
+   margin-right: 6px;
+ }
+
+li:last-child:before {
+   display: none;
+}
+
+.section1 .card {
+
+   box-shadow: 8px 4px 0 0 #ddd;
+
+}
+
+.section2 .card {
+
+   border: none;
+
+   box-shadow: 0 2px 20px #ddd;
+
+}
+
+.section3 .card {
+   width: 50%;
+}
+#fileLoader
+{
+    display:none;
+}
+
+#btnOpenFileDialog{
+   background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.border1 {
+   border: 1px solid #4caf50 !important;
+}
+@media (max-width:768px){
+
+   li::before {
+   display:none;
+   }
+   }
